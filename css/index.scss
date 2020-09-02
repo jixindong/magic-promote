@@ -1,0 +1,90 @@
+// 主体
+.bd .container {
+    flex-flow: column nowrap;
+
+    .content {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1.875rem 1.25rem;
+        width: 100%;
+
+        >.title {
+            margin: 1.25rem 0 3.125rem;
+            color: #333;
+            font-size: 1.875rem;
+            text-align: center;
+        }
+    }
+
+    .content-1 {
+        .sellGoodItems {
+            width: 100%;
+
+            .item {
+                display: none;
+                width: 50%;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        .sellGoodTabs {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .item {
+                margin: 0.625rem 0;
+                cursor: pointer;
+
+                &.active {
+                    background-color: #e7c7ff;
+                }
+            }
+        }
+    }
+
+    .content-2 .serviceSys .item {
+        position: relative;
+        margin: 1rem 0;
+
+        &:hover {
+            img {
+                opacity: 0;
+            }
+
+            .info-box .info {
+                margin-top: 0;
+                background-color: #0094ff;
+            }
+        }
+
+        img {
+            width: 100%;
+            transition: opacity 1s;
+        }
+
+        .info-box {
+            position: absolute;
+            top: 0;
+            left: 0.9375rem;
+            width: calc(100% - 1.875rem);
+            height: 100%;
+            color: #fff;
+            overflow: hidden;
+
+            .info {
+                margin-top: 14.25rem;
+                height: 100%;
+                background-color: #00000050;
+                transition: margin 1s, background-color 1s;
+
+                .title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
