@@ -12,10 +12,16 @@
 
 a {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        opacity: .9;
+    }
 }
 
 body {
     font-size: 16px;
+    font-family: 'PingFang SC';
 }
 
 // 滚动条
@@ -56,7 +62,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: #00000010;
-    z-index: 1;
+    z-index: 16;
     transition: background-color 1s;
 
     &.hd-theme-color {
@@ -71,6 +77,7 @@ body {
 
             .logo {
                 width: 100%;
+                min-width: 6.25rem;
             }
 
             .link-box {
@@ -85,9 +92,62 @@ body {
                 }
             }
 
+            .login-box {
+                justify-content: flex-end;
+
+                .login-btn {
+                    padding: 0.25rem 0.675rem;
+                    color: #fff;
+                    border: 1px solid #fff;
+                    border-radius: 5px;
+                }
+            }
+
             .dropdown {
                 margin-left: auto;
+                height: 1.3125rem;
+
+                .menu-btn {
+                    padding: 0.375rem 0;
+                    width: 50%;
+                    min-width: 1.25rem;
+                    height: 1.3125rem;
+                    background-color: #fff;
+                    background-clip: content-box;
+                    border-top: 0.1875rem solid #fff;
+                    border-bottom: 0.1875rem solid #fff;
+                }
             }
         }
+    }
+
+    .hide-nav {
+        position: absolute;
+        display: none;
+        width: 100%;
+
+        .nav-list {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            background-color: #2897ff;
+
+            .link {
+                padding: 0.6rem 0 0.6rem 1.25rem;
+                color: #fff;
+
+                &.active {
+                    color: #9fd1f5;
+                }
+            }
+        }
+    }
+}
+
+// 媒体查询
+@media (max-width: 576px) {
+    .hd .container .content .logo {
+        position: relative;
+        right: -1.25rem;
     }
 }

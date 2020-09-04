@@ -22,31 +22,31 @@
         <div class="container">
             <div class="content row">
                 <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
-
-                <div class="link-box col-md-10 d-none d-md-flex">
+                <div class="link-box col-md-8 d-none d-md-flex">
                     <a href="javascript:void(0)" class="link active ">首页</a>
                     <a href="javascript:void(0)" class="link">网红合作</a>
                     <a href="javascript:void(0)" class="link">商家入驻</a>
                     <a href="javascript:void(0)" class="link">代理招商</a>
                     <a href="javascript:void(0)" class="link">行业资讯</a>
                     <a href="javascript:void(0)" class="link">关于我们</a>
-                    <a href="javascript:void(0)" class="link">商家登录</a>
                 </div>
-
-
-                <div class="dropdown d-md-none">
-                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">-</button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="javascript:void(0)">首页</a>
-                        <a class="dropdown-item" href="javascript:void(0)">网红合作</a>
-                        <a class="dropdown-item" href="javascript:void(0)">商家入驻</a>
-                        <a class="dropdown-item" href="javascript:void(0)">代理招商</a>
-                        <a class="dropdown-item" href="javascript:void(0)">行业资讯</a>
-                        <a class="dropdown-item" href="javascript:void(0)">关于我们</a>
-                        <a class="dropdown-item" href="javascript:void(0)">商家登录</a>
-                    </div>
+                <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
                 </div>
+                <div id="dropdown" class="dropdown col-2 d-md-none">
+                    <div class="menu-btn"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hide-nav" class="hide-nav">
+            <div class="nav-list">
+                <a href="javascript:void(0)" class="link active">首页</a>
+                <a href="javascript:void(0)" class="link">网红合作</a>
+                <a href="javascript:void(0)" class="link">商家入驻</a>
+                <a href="javascript:void(0)" class="link">代理招商</a>
+                <a href="javascript:void(0)" class="link">行业资讯</a>
+                <a href="javascript:void(0)" class="link">关于我们</a>
+                <a href="javascript:void(0)" class="link">商家登录</a>
             </div>
         </div>
     </div>
@@ -79,65 +79,412 @@
 
     <!-- 主体 -->
     <div class="bd">
-        <div class="container">
-            <!-- content-1 -->
-            <div class="content content-1">
+        <!-- content-1 -->
+        <div class="content content-1">
+            <div class="container flex-column">
                 <div class="title">为网红打造一站式无忧卖货体验</div>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div id="sellGoodItems" class="sellGoodItems">
-                            <img src="images/avatar-1.jpg" class="item active">
-                            <img src="images/avatar-2.jpg" class="item">
-                        </div>
+                        <img src="images/motui-ad-1.png" class="ad">
                     </div>
                     <div class="col-md-6">
-                        <div id="sellGoodTabs" class="sellGoodTabs">
-                            <div class="item active">1.文字文字文字</div>
-                            <div class="item">2.文字文字文字</div>
+                        <div class="msg-list">
+                            <div class="item">
+                                <div class="title">1.多电商平台对接</div>
+                                <div class="text">多电商平台API对接，淘宝、天猫京东、小店、聚划算、等主流电商平台数据。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">2.运维数据多维分析</div>
+                                <div class="text">产品数据，财务数据，粉丝数据，平台盈利，多维度数据查询分析让您的决策更加精准有效。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">3.优质充足、高性价比的货品资源</div>
+                                <div class="text">精选10万+SKU，包含食品、美妆、生活百货、服饰配件等众多热门类目。</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- content-2 -->
-            <div class="content content-2">
+        <!-- content-2 -->
+        <div class="content content-2">
+            <div class="container flex-column">
                 <div class="title">全方位网红服务体系</div>
 
-                <div class="serviceSys row">
-                    <div class="item col-12 col-sm-6 col-md-3">
-                        <img src="images/avatar-1.jpg">
-                        <div class="info-box">
+                <div id="serviceSys" class="serviceSys row">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/serve-1.jpg">
                             <div class="info">
-                                <div class="title">标题标题标题</div>
-                                <div class="text">文字文字文字</div>
+                                <div class="title">涨粉指导</div>
+                                <div class="text">
+                                    <div class="text-left">针对有涨粉需求的网红达人，可提供全面的实用涨粉经验和技巧。</div>
+                                    <a href="javascript:void(0)" class="open-btn">立即开通</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item col-12 col-sm-6 col-md-3">
-                        <img src="images/avatar-1.jpg">
-                        <div class="info-box">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/serve-2.png">
                             <div class="info">
-                                <div class="title">标题标题标题</div>
-                                <div class="text">文字文字文字</div>
+                                <div class="title">电商培训</div>
+                                <div class="text">
+                                    <div class="text-left">提供选品指导、产品推广、售卖技巧、粉丝运营等电商知识培训。</div>
+                                    <a href="javascript:void(0)" class="open-btn">立即开通</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item col-12 col-sm-6 col-md-3">
-                        <img src="images/avatar-2.jpg">
-                        <div class="info-box">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/serve-3.jpg">
                             <div class="info">
-                                <div class="title">标题标题标题</div>
-                                <div class="text">文字文字文字</div>
+                                <div class="title">货品对接</div>
+                                <div class="text">
+                                    <div class="text-left">针对某直播接单的网红达人，我们的工作人员将全程负责与商家、物流商的货品对接工作。</div>
+                                    <a href="javascript:void(0)" class="open-btn">立即开通</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item col-12 col-sm-6 col-md-3">
-                        <img src="images/avatar-2.jpg">
-                        <div class="info-box">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/serve-4.jpg">
                             <div class="info">
-                                <div class="title">标题标题标题</div>
-                                <div class="text">文字文字文字</div>
+                                <div class="title">专属客服</div>
+                                <div class="text">
+                                    <div class="text-left">针对某直播接单的网红达人，平台上的所有咨询问题均有客服参与回复，客服时间：周一到周日9:00～21:00</div>
+                                    <a href="javascript:void(0)" class="open-btn">立即开通</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-3 -->
+        <div class="content content-3 bgc-off-white">
+            <div class="container flex-column">
+                <div class="title">这些网红都在用</div>
+
+                <div class="star-list row">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-1.jpg">
+                            <div class="name">爱美妆的木子萌</div>
+                            <div class="fans">粉丝数：29.3W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-2.jpg">
+                            <div class="name">小小小jojo</div>
+                            <div class="fans">粉丝数：107.6W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-3.jpg">
+                            <div class="name">尤里喔</div>
+                            <div class="fans">粉丝数：76.5W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-4.jpg">
+                            <div class="name">你的廖先生</div>
+                            <div class="fans">粉丝数：118.3W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-5.jpg">
+                            <div class="name">超甜少女佳</div>
+                            <div class="fans">粉丝数：147.4W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-6.jpg">
+                            <div class="name">圆子要你好看</div>
+                            <div class="fans">粉丝数：65.0W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-7.jpg">
+                            <div class="name">雪梨cherie</div>
+                            <div class="fans">粉丝数：93.8W</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/star-8.jpg">
+                            <div class="name">美男子宝哥</div>
+                            <div class="fans">粉丝数：60.8W</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-box">
+                    <a href="javascript:void(0)" class="btn">立即开通</a>
+                    <a href="javascript:void(0)" class="btn">下载APP</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-4 -->
+        <div class="content content-4">
+            <div class="container flex-column">
+                <div class="title">帮助商家成功布局</div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/office.png" class="ad">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="msg-list">
+                            <div class="item">
+                                <div class="title">1.网红达人流量</div>
+                                <div class="text">帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">2.品牌曝光</div>
+                                <div class="text">联合网红共同打造爆款，通过货源突出展示、短视频，直播流量引入、网红推荐等方式，帮助商家全面提升品牌曝光。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">3.整合营销</div>
+                                <div class="text">专业运营团队配合提炼产品卖点，对相关产品进行集中推广，帮助商家实现销售变现与品牌推广的双重效益。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">4.服务顾问</div>
+                                <div class="text">配合专业服务团队，提升1对1专属顾问支持，通过定制个性化的解决方案，帮助商家最大化提升销售转化。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-5 -->
+        <div class="content content-5 bgc-off-white">
+            <div class="container flex-column">
+                <div class="title">完整的商家服务体系</div>
+
+                <div class="merchant-serve-list row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/market.png">
+                            <div class="title">快速入驻</div>
+                            <div>1天内通过审核，帮助商家快速入驻平台。</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/target.png">
+                            <div class="title">网红匹配</div>
+                            <div>根据网红和产品的特点，帮助进行个性化匹配。</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/camera.png">
+                            <div class="title">视频拍摄</div>
+                            <div>精选卖点提炼，专业影视策划，量身打造卖点文案。</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/service.png">
+                            <div class="title">专属客服</div>
+                            <div>专业客服团队，解决商家遇到的各类难题。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-6 -->
+        <div class="content content-6 bgc-off-white">
+            <div class="container flex-column">
+                <div class="title">热门商品</div>
+
+                <div class="good-list row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/ad-female.jpg">
+                            <div class="info">
+                                <img src="images/dress.png">
+                                <span>女装</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/ad-male.jpg">
+                            <div class="info">
+                                <img src="images/suit.png">
+                                <span>男装</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/ad-cosmetics.jpg">
+                            <div class="info">
+                                <img src="images/lipstick.png">
+                                <span>美妆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="item">
+                            <img src="images/ad-food.jpg">
+                            <div class="info">
+                                <img src="images/feast.png">
+                                <span>美食</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-7 -->
+        <div class="content content-7">
+            <div class="container flex-column">
+                <div class="title">公司动态</div>
+
+                <div class="company-news">
+                    <div id="newsTabs" class="news-tabs">
+                        <div class="item active">一周快报</div>
+                        <div class="item">公司快讯</div>
+                        <div class="item">网红故事</div>
+                    </div>
+
+                    <div id="newsList" class="news-list">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-12 col-md-6"><img src="images/motui-ad-1.png"></div>
+                                <div class="col-12 col-md-6">
+                                    <div class="info-list">
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-01</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div class="text">帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-01</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-01</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-md-6"><img src="images/motui-ad-1.png"></div>
+                                <div class="col-12 col-md-6">
+                                    <div class="info-list">
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-02</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div class="text">帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-02</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-02</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-md-6"><img src="images/motui-ad-1.png"></div>
+                                <div class="col-12 col-md-6">
+                                    <div class="info-list">
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-03</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div class="text">帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-03</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="date">
+                                                <span class="month-day">09-03</span>
+                                                <span>2020</span>
+                                            </div>
+                                            <div class="msg">
+                                                <div class="title">网红达人流量</div>
+                                                <div>帮助商家有效的触达、获取海量网红资源，并通过“货源”与“网红”的优质匹配，快速布局短视频•直播渠道。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,6 +493,50 @@
         </div>
     </div>
     <!-- 主体 end -->
+
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="container justify-content-between">
+            <div class="link-box d-none d-md-flex">
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">首页</a>
+                    <a href="javascript:void(0)" class="link">公司简介</a>
+                    <a href="javascript:void(0)" class="link">发展历程</a>
+                    <a href="javascript:void(0)" class="link">合作伙伴</a>
+                    <a href="javascript:void(0)" class="link">联系我们</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link">福窝学院</a>
+                    <a href="javascript:void(0)" class="link">智能云设计</a>
+                    <a href="javascript:void(0)" class="link">数字化供应链</a>
+                    <a href="javascript:void(0)" class="link">本地化快装</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link">品牌加盟</a>
+                    <a href="javascript:void(0)" class="link">合伙人加盟</a>
+                    <a href="javascript:void(0)" class="link">APP下载</a>
+                    <a href="javascript:void(0)" class="link">VR产品</a>
+                    <a href="javascript:void(0)" class="link">福币购买</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">代理招商</a>
+                </div>
+            </div>
+            <div class="co-info">
+                <span class="title">购买或合作咨询</span>
+                <span class="tel">19901840323</span>
+                <spa class="title">使用问题咨询（09:00-18:00）</spa>
+                <span class="tel">13917409692</span>
+                <span>邮箱：service@fuwo.com</span>
+                <span>微博：@爱福窝云设计</span>
+                <span>微信客服：myfuwo</span>
+            </div>
+            <div class="qrcode-box"><img src="images/qrcode.jpg"></div>
+        </div>
+    </div>
+    <!-- 底部 end -->
 </body>
 
 </html>
