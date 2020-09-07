@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商家入驻</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/merchant-enter.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/merchant-enter.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div id="hd" class="hd">
+        <div class="container">
+            <div class="content row">
+                <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
+                <div class="link-box col-md-8 d-none d-md-flex">
+                    <a href="index.html" class="link active">首页</a>
+                    <a href="star-coop.html" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link active">商家入驻</a>
+                    <a href="agency-merchant.html" class="link">代理招商</a>
+                    <a href="industry-info.html" class="link">行业资讯</a>
+                    <a href="about-us.html" class="link">关于我们</a>
+                </div>
+                <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
+                </div>
+                <div id="dropdown" class="dropdown col-2 d-md-none">
+                    <div class="menu-btn"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hide-nav" class="hide-nav">
+            <div class="nav-list">
+                <a href="index.html" class="link active">首页</a>
+                <a href="star-coop.html" class="link">网红合作</a>
+                <a href="javascript:void(0)" class="link active">商家入驻</a>
+                <a href="agency-merchant.html" class="link">代理招商</a>
+                <a href="industry-info.html" class="link">行业资讯</a>
+                <a href="about-us.html" class="link">关于我们</a>
+                <a href="javascript:void(0)" class="link">商家登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 end -->
+
+    <!-- banner -->
+    <div id="banner-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators"></ol>
+        <div class="carousel-inner"></div>
+    </div>
+    <!-- banner end -->
+
+    <!-- 主体 -->
+    <div class="bd">
+        <!-- content-1 -->
+        <div class="content content-1">
+            <div class="container flex-column">
+                <div class="title">入驻指南</div>
+
+                <div class="enter-guide">
+                    <div class="item">
+                        <img src="images/icon-user.png">
+                        <div class="title">开通账户</div>
+                        <div>上传营业执照，24小时完成审核。</div>
+                    </div>
+                    <div class="item">
+                        <img src="images/icon-upload.png">
+                        <div class="title">上传商品</div>
+                        <div>同步电商平台商品资料，简化上传流程。</div>
+                    </div>
+                    <div class="item">
+                        <img src="images/icon-camera-2.png">
+                        <div class="title">寄样拍摄</div>
+                        <div>按照平台要求寄样给平台，平台安排专业工作室集中拍摄。</div>
+                    </div>
+                    <div class="item">
+                        <img src="images/icon-trumpet.png">
+                        <div class="title">达人推广</div>
+                        <div>快速匹配达人，完成营销闭环。</div>
+                    </div>
+                    <a href="javascript:void(0)" class="apply-btn">立即申请</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-2 -->
+        <div class="content content-2 bgi-1">
+            <div class="container flex-column">
+                <div class="title text-white">平台优势</div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="platform-advantage">
+                            <div class="num">01</div>
+                            <img src="images/ikon-decline.png">
+                            <div class="info">
+                                <div class="title">低成本</div>
+                                <div class="text">传统抖音验货平台商家找100个达人带货，需发100个样品给达人，我们集中拍摄，仅需一个样品。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="platform-advantage">
+                            <div class="num">02</div>
+                            <img src="images/ikon-rocket.png">
+                            <div class="info">
+                                <div class="title">高效率</div>
+                                <div class="text">商家按照平台地址发货给专业拍摄工作室，收到样品72小时内完成拍摄任务，保证商品可以快速推广。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="platform-advantage">
+                            <div class="num">03</div>
+                            <img src="images/ikon-data-analysis.png">
+                            <div class="info">
+                                <div class="title">更专业</div>
+                                <div class="text">视频发出后，平台数据实时监控，视频热门，绝不错过最佳dou+投放时间。争取订单最大化。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="platform-advantage">
+                            <div class="num">04</div>
+                            <img src="images/ikon-rise.png">
+                            <div class="info">
+                                <div class="title">有保障</div>
+                                <div class="text">我们聚集5万达人可以为你推广商品，拥有专业的拍摄团队为你降低推广成本。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-3 -->
+        <div class="content content-3">
+            <div class="container flex-column">
+                <div class="title">套餐费用</div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="meal-fee">
+                            <div class="info">
+                                <div class="title">体验包</div>
+                                <div>活动价：3980</div>
+                            </div>
+                            <div class="detail">
+                                <div class="item">
+                                    <img src="images/icon-video.png">
+                                    <div>视频</div>
+                                    <div>100条</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-message.png">
+                                    <div>达人推广</div>
+                                    <div>100个</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-record.png">
+                                    <div>直播</div>
+                                    <div>6场</div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="link">立即购买</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="meal-fee">
+                            <div class="info">
+                                <div class="title">入门包</div>
+                                <div>活动价：6980</div>
+                            </div>
+                            <div class="detail">
+                                <div class="item">
+                                    <img src="images/icon-video.png">
+                                    <div>视频</div>
+                                    <div>200条</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-message.png">
+                                    <div>达人推广</div>
+                                    <div>200个</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-record.png">
+                                    <div>直播</div>
+                                    <div>15场</div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="link">立即购买</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="meal-fee">
+                            <div class="info">
+                                <div class="title">体验包</div>
+                                <div>活动价：9980</div>
+                            </div>
+                            <div class="detail">
+                                <div class="item">
+                                    <img src="images/icon-video.png">
+                                    <div>视频</div>
+                                    <div>300条</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-message.png">
+                                    <div>达人推广</div>
+                                    <div>300个</div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon-record.png">
+                                    <div>直播</div>
+                                    <div>26场</div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="link">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-4 -->
+        <div class="content content-4 bgc-off-white">
+            <div class="container flex-column">
+                <div class="title">这些商家都在用</div>
+
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-1.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-2.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-3.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-4.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-5.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-6.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-7.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-8.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-9.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-10.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-11.png"></div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <div class="merchant-use"><img src="images/client-logo-12.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 end -->
+
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="container justify-content-between">
+            <div class="link-box d-none d-md-flex">
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">首页</a>
+                    <a href="javascript:void(0)" class="link">公司简介</a>
+                    <a href="javascript:void(0)" class="link">发展历程</a>
+                    <a href="javascript:void(0)" class="link">合作伙伴</a>
+                    <a href="javascript:void(0)" class="link">联系我们</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link">福窝学院</a>
+                    <a href="javascript:void(0)" class="link">智能云设计</a>
+                    <a href="javascript:void(0)" class="link">数字化供应链</a>
+                    <a href="javascript:void(0)" class="link">本地化快装</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link">品牌加盟</a>
+                    <a href="javascript:void(0)" class="link">合伙人加盟</a>
+                    <a href="javascript:void(0)" class="link">APP下载</a>
+                    <a href="javascript:void(0)" class="link">VR产品</a>
+                    <a href="javascript:void(0)" class="link">福币购买</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">代理招商</a>
+                </div>
+            </div>
+            <div class="co-info">
+                <span class="title">购买或合作咨询</span>
+                <span class="tel">19901840323</span>
+                <spa class="title">使用问题咨询（09:00-18:00）</spa>
+                <span class="tel">13917409692</span>
+                <span>邮箱：service@fuwo.com</span>
+                <span>微博：@爱福窝云设计</span>
+                <span>微信客服：myfuwo</span>
+            </div>
+            <div class="qrcode-box"><img id="qrcode-co" src=""></div>
+        </div>
+    </div>
+    <!-- 底部 end -->
+</body>
+
+</html>

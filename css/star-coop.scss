@@ -1,0 +1,166 @@
+/* ------------ 主体 ------------ */
+.bd .content {
+    padding-bottom: 5rem;
+
+    &.bgc-off-white {
+        background-color: #f9f9f9;
+    }
+
+    &.content-1 .swiper-case {
+        position: relative;
+
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            padding-top: 1.25rem;
+            width: 100%;
+
+            .swiper-pagination-bullet {
+                margin: 0 0.3125rem;
+            }
+        }
+    }
+
+    &.content-2 .ikon {
+        width: 90%;
+    }
+
+    &.content-3 .course-serve {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin: 1.25rem 0;
+        height: 14.375rem;
+        border-radius: 0.625rem;
+        box-shadow: 0.2rem 0.2rem 0.3rem #cccccc80;
+
+        img {
+            margin: 0 1.875rem;
+            width: 9.375rem;
+        }
+
+        .info {
+            display: flex;
+            flex-flow: column nowrap;
+            color: #656565;
+
+            .num {
+                width: 3rem;
+                line-height: 3rem;
+                color: #fff;
+                font-size: 1.25rem;
+                text-align: center;
+                background-color: #2797FF;
+                border-radius: 50%;
+            }
+
+            .title {
+                margin: 1.25rem 0 0.625rem;
+                color: #333;
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &.content-4 .swiper-star {
+        position: relative;
+
+        .swiper-container {
+            width: 60rem;
+            height: 28.75rem;
+            border-radius: 1.875rem;
+            box-shadow: 0.2rem 0.2rem 0.3rem #cccccc80;
+
+            .swiper-slide {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 3.125rem;
+                background-color: #fff;
+
+                img {
+                    width: 23.75rem;
+                    height: 23.75rem;
+                    border-radius: 1.25rem;
+                }
+
+                .info {
+                    width: 26.25rem;
+                    font-size: 1.125rem;
+                    text-align: center;
+
+                    .name {
+                        color: #333;
+                        font-size: 2.25rem;
+                    }
+
+                    .fans {
+                        margin: 1.25rem 0 1.875rem;
+                        color: #FF6100;
+                    }
+
+                    .text {
+                        line-height: 2.25rem;
+                        color: #999;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 4.25rem;
+            height: 4.25rem;
+            color: #FD8553;
+            border: 0.0625rem solid;
+            border-radius: 50%;
+
+            &:focus {
+                outline: 0 none;
+            }
+        }
+    }
+
+    .container {
+        >.title {
+            margin: 7.5rem 0 5rem;
+            color: #343434;
+            font-size: 3.125rem;
+            text-align: center;
+        }
+
+        .case-list {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .item {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                margin-bottom: 1.875rem;
+
+                img {
+                    margin-right: 1rem;
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                .info {
+                    color: #999;
+                    font-size: 1rem;
+
+                    .title {
+                        margin-bottom: 0.625rem;
+                        color: #333;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------ 媒体查询 ------------ */

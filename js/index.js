@@ -1,4 +1,6 @@
 let homeFunc = ((win) => {
+    let baseURL = 'http://192.168.1.249:8080/';
+
     // 事件绑定
     function eventBind() {
         // 改变导航栏背景色
@@ -42,11 +44,63 @@ let homeFunc = ((win) => {
         };
     };
 
+    // 获取轮播图
+    function fetchCarousel() {
+        $.ajax({
+            url: baseURL + 'picture/list',
+            type: 'POST',
+            data: {
+                'type': 'web',
+                'position': 'sy'
+            },
+            dataType: 'json',
+            success: (res) => {
+                let imgs = res.page.list.map(e => e.path);
+                imgs.forEach((e, i) => {
+                    if (i === 0) {
+                        $('#banner-carousel .carousel-indicators').append('<li data-target="#banner-carousel" data-slide-to="0" class="active"></li>');
+                        $('#banner-carousel .carousel-inner').append(`<div class="carousel-item active"><img src="${e}" class="d-block w-100"></div>`);
+                    } else {
+                        $('#banner-carousel .carousel-indicators').append(`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
+                        $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"></div>`);
+                    }
+                });
+            }
+        });
+    };
+
+    // 获取网站信息
+    function fetchHomeInfo() {
+        $.ajax({
+            url: baseURL + 'setting/listByGroup',
+            type: 'POST',
+            data: {
+                'sort': 'bas'
+            },
+            dataType: 'json',
+            success: (res) => {
+                // title
+                let homeTitle = res.data.filter(e => e.name === 'bas_site_name');
+                document.title = homeTitle[0].value;
+                // 下载APP
+                let appDownload = res.data.filter(e => e.name === 'app');
+                $('#app-download').attr('href', appDownload[0].value);
+                // 公司二维码
+                let qrcodeCo = res.data.filter(e => e.name === 'gs_ewm');
+                $('#qrcode-co').attr('src', qrcodeCo[0].value);
+            }
+        });
+    };
+
     return {
-        eventBind
+        eventBind,
+        fetchCarousel,
+        fetchHomeInfo
     };
 })(window);
 
 $(() => {
     homeFunc.eventBind(); // 事件绑定
+    homeFunc.fetchCarousel(); // 获取轮播图
+    homeFunc.fetchHomeInfo(); // 获取网站信息
 });

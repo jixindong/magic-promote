@@ -1,0 +1,183 @@
+/* ------------ 主体 ------------ */
+.bd .content {
+    padding-bottom: 5rem;
+
+    &.bgc-off-white {
+        background-color: #f9f9f9;
+    }
+
+    &.bgi-1 {
+        background-image: url(../images/background-image-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.content-1 .enter-guide {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 6.25rem 0;
+        border: 0.125rem dashed #999;
+        border-radius: 2.5rem;
+
+        .item {
+            position: relative;
+            width: 10rem;
+            color: #666;
+
+            img {
+                position: absolute;
+                left: 50%;
+                width: 5.625rem;
+                transform: translate(-50%, -9.0625rem);
+            }
+
+            .title {
+                margin-bottom: 1rem;
+                color: #333;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .apply-btn {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 12.5rem;
+            line-height: 3.125rem;
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #2897FF;
+            border-radius: 1.875rem;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &.content-2 .platform-advantage {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.25rem 0;
+        padding: 0 2.5rem;
+        height: 15.625rem;
+        background-color: #fff;
+        border-radius: 1.25rem;
+        box-shadow: 0.2rem 0.2rem 0.3rem #66666680;
+
+        img {
+            width: 12.5rem;
+        }
+
+        .num {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3.625rem;
+            height: 3.625rem;
+            line-height: 3rem;
+            color: #2697FD;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #fff;
+            border: 0.3125rem solid;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .info {
+            width: 17.1875rem;
+
+            .title {
+                margin-bottom: 1rem;
+                color: #333;
+                font-size: 1.5rem;
+            }
+
+            .text {
+                line-height: 1.5rem;
+                color: #999;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &.content-3 .meal-fee {
+        margin: 0.625rem 0;
+        width: 21.5625rem;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        box-shadow: 0.2rem 0.2rem 0.3rem #99999999;
+
+        .info {
+            padding: 1.875rem 0 1.25rem;
+            color: #fff;
+            font-size: 1.125rem;
+            text-align: center;
+            background-color: #2797FF;
+
+            .title {
+                margin-bottom: 0.625rem;
+                font-size: 2.25rem;
+            }
+        }
+
+        .detail {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            padding: 1.875rem 0;
+
+            .item {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                color: #666;
+                font-size: 1.25rem;
+
+                img {
+                    margin-bottom: 0.625rem;
+                    width: 4.375rem;
+                    height: 4.375rem;
+                }
+            }
+        }
+
+        .link {
+            display: block;
+            margin: 0 auto 1.875rem;
+            width: 10rem;
+            line-height: 2.5rem;
+            color: #fff;
+            text-align: center;
+            background-color: #2797FF;
+            border-radius: 0.625rem;
+        }
+    }
+
+    &.content-4 .merchant-use {
+        margin: .5rem 0;
+        text-align: center;
+        background-color: #fff;
+        border: 0.0625rem solid #E0E0E0;
+        border-radius: 0.625rem;
+        box-shadow: 0.2rem 0.2rem 0.3rem #cccccc60;
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .container>.title {
+        margin: 7.5rem 0 5rem;
+        color: #343434;
+        font-size: 3.125rem;
+        text-align: center;
+    }
+}
+
+/* ------------ 媒体查询 ------------ */
