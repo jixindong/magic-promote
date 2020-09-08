@@ -6,10 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>关于我们</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/about-us.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//api.map.baidu.com/api?v=2.0&ak=ywQxXrFsGSM59mEZ88C2Dg1s43DdEmsQ"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/about-us.js"></script>
 </head>
 
 <body>
+    <!-- 导航栏 -->
+    <div id="hd" class="hd">
+        <div class="container">
+            <div class="content row">
+                <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
+                <div class="link-box col-md-8 d-none d-md-flex">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="star-coop.html" class="link">网红合作</a>
+                    <a href="merchant-enter.html" class="link">商家入驻</a>
+                    <a href="agency-merchant.html" class="link">代理招商</a>
+                    <a href="industry-info.html" class="link">行业资讯</a>
+                    <a href="javascript:void(0)" class="link active">关于我们</a>
+                </div>
+                <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
+                </div>
+                <div id="dropdown" class="dropdown col-2 d-md-none">
+                    <div class="menu-btn"></div>
+                </div>
+            </div>
+        </div>
 
+        <div id="hide-nav" class="hide-nav">
+            <div class="nav-list">
+                <a href="index.html" class="link">首页</a>
+                <a href="star-coop.html" class="link">网红合作</a>
+                <a href="merchant-enter.html" class="link">商家入驻</a>
+                <a href="agency-merchant.html" class="link">代理招商</a>
+                <a href="industry-info.html" class="link">行业资讯</a>
+                <a href="javascript:void(0)" class="link active">关于我们</a>
+                <a href="javascript:void(0)" class="link">商家登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 end -->
+
+    <!-- banner -->
+    <div id="banner" class="banner"><img src="images/banner-about-us.png"></div>
+    <!-- banner end -->
+
+    <!-- 主体 -->
+    <div class="bd">
+        <div class="container flex-column">
+            <div class="title">关于我们</div>
+            <div class="about-us-box">
+                <div id="detail-tabs" class="detail-tabs">
+                    <div class="item active">公司简介</div>
+                    <div class="item">平台介绍</div>
+                    <div class="item">团队介绍</div>
+                </div>
+                <div id="detail-content" class="detail-content">
+                    <div id="co-intro" class="item active"></div>
+                    <div id="platform-intro" class="item"></div>
+                    <div id="team-intro" class="item"></div>
+                </div>
+            </div>
+
+            <div class="title">联系地址</div>
+            <div id="co-map" class="co-map"></div>
+
+            <div class="title">联系方式</div>
+            <div class="co-contact row">
+                <div class="col-md-6"><img src="images/ikon-construction.png" class="construction"></div>
+                <div class="col-md-6">
+                    <div class="contact-list">
+                        <div class="item">
+                            <div class="icon"><img src="images/icon-construction.png"></div>
+                            <span class="title">公司名称：</span>
+                            <span>山东瓦艾斯智能科技有限公司</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon"><img src="images/icon-phone.png"></div>
+                            <span class="title">联系电话：</span>
+                            <span>0533-8795567</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon"><img src="images/icon-site.png"></div>
+                            <span class="title">公司地址：</span>
+                            <span>山东省淄博市张店区金达大厦1911室</span>
+                        </div>
+                        <div class="item">
+                            <div class="icon"><img src="images/icon-envelope.png"></div>
+                            <span class="title">联系邮箱：</span>
+                            <span>bd@waszn.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 end -->
+
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="container justify-content-between">
+            <div class="link-box d-none d-md-flex">
+                <div class="link-list-item">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="javascript:void(0)" class="link">公司简介</a>
+                    <a href="javascript:void(0)" class="link">发展历程</a>
+                    <a href="javascript:void(0)" class="link">合作伙伴</a>
+                    <a href="javascript:void(0)" class="link">联系我们</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link">福窝学院</a>
+                    <a href="javascript:void(0)" class="link">智能云设计</a>
+                    <a href="javascript:void(0)" class="link">数字化供应链</a>
+                    <a href="javascript:void(0)" class="link">本地化快装</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link">品牌加盟</a>
+                    <a href="javascript:void(0)" class="link">合伙人加盟</a>
+                    <a href="javascript:void(0)" class="link">APP下载</a>
+                    <a href="javascript:void(0)" class="link">VR产品</a>
+                    <a href="javascript:void(0)" class="link">福币购买</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">代理招商</a>
+                </div>
+            </div>
+            <div class="co-info">
+                <span class="title">购买或合作咨询</span>
+                <span id="co-tel" class="tel"></span>
+                <spa class="title">使用问题咨询（09:00-18:00）</spa>
+                <span id="ask-tel" class="tel"></span>
+                <span>邮箱：<span id="email"></span></span>
+                <span>微博：<span id="micro-blog"></span></span>
+                <span>微信客服：<span id="WeChat-service"></span></span>
+            </div>
+            <div class="qrcode-box"><img id="qrcode-co" src=""></div>
+        </div>
+    </div>
+    <!-- 底部 end -->
 </body>
 
 </html>

@@ -1,0 +1,104 @@
+/* ------------ banner ------------ */
+.banner img {
+    width: 100%;
+}
+
+/* ------------ 主体 ------------ */
+.bd .container {
+    padding-bottom: 5rem;
+
+    >.title {
+        margin: 7.5rem 0 5rem;
+        color: #343434;
+        font-size: 3.125rem;
+        text-align: center;
+    }
+
+    .about-us-box {
+        .detail-tabs {
+            display: flex;
+            justify-content: center;
+
+            .item {
+                position: relative;
+                margin: 0 1.25rem;
+                width: 10rem;
+                line-height: 3.125rem;
+                color: #333;
+                text-align: center;
+                border: 0.0625rem solid #D5D5D5;
+
+                &.active {
+                    color: #fff;
+                    background-color: #569FC8;
+
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        content: '';
+                        border-top: 1.25rem solid #569FC8;
+                        border-right: 0.625rem solid transparent;
+                        border-left: 0.625rem solid transparent;
+                        transform: translate(-50%, 1.25rem);
+                    }
+                }
+            }
+        }
+
+        .detail-content .item {
+            display: none;
+            padding-top: 3.125rem;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .co-map {
+        height: 34.375rem;
+    }
+
+    .co-contact {
+        .construction {
+            width: 80%;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2.5rem;
+                color: #666;
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1.25rem;
+                    width: 3.75rem;
+                    height: 3.75rem;
+                    border: 0.0625rem solid #333;
+                    border-radius: 50%;
+
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                .title {
+                    color: #333;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* ------------ 媒体查询 ------------ */

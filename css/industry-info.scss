@@ -1,15 +1,19 @@
 /* ------------ banner ------------ */
-.banner img{
+.banner img {
     width: 100%;
 }
+
 /* ------------ 主体 ------------ */
-.bd{
+.bd .container {
+    justify-content: space-between;
     padding: 6.25rem 0 7.5rem;
-    .info-lf{
-        .info-tabs{
+
+    .info-lf {
+        .info-tabs {
             display: flex;
             border-bottom: 0.0625rem solid #D1D1D1;
-            .item{
+
+            .item {
                 position: relative;
                 bottom: -0.0625rem;
                 padding-bottom: 0.625rem;
@@ -18,31 +22,37 @@
                 font-size: 1.25rem;
                 text-align: center;
                 border-bottom: 0.375rem solid transparent;
-                &.active{
+
+                &.active {
                     color: #2797FF;
                     border-color: #2797FF;
                 }
             }
         }
-        .info-list{
+
+        .info-list {
             margin-top: 1.875rem;
-            width: 52.5rem;
-            .item{
+            width: 50rem;
+
+            .item {
                 display: flex;
                 overflow: hidden;
                 border: 0.0625rem solid #D1D1D1;
                 border-radius: 0.625rem;
-                img{
+
+                img {
                     width: 21.25rem;
                 }
-                .info{
+
+                .info {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-around;
                     padding: 0 1.875rem;
                     color: #656565;
                     font-size: 0.875rem;
-                    .title{
+
+                    .title {
                         color: #333;
                         font-size: 1.25rem;
                     }
@@ -50,5 +60,46 @@
             }
         }
     }
+
+    .info-rt {
+        .search-box {
+            display: flex;
+            align-items: center;
+            padding: 0 1.25rem;
+            width: 19.375rem;
+            overflow: hidden;
+            border: 0.0625rem solid #D1D1D1;
+            border-radius: 1.25rem;
+
+            input {
+                flex: 1;
+                line-height: 3.125rem;
+                border: 0 none;
+                outline: 0 none;
+            }
+
+            img {
+                width: 1.375rem;
+            }
+        }
+
+        .news-hot {
+            .title {
+                padding: 2.5rem 0 1.25rem;
+                color: #333;
+                font-size: 1.25rem;
+                border-bottom: 0.0625rem solid #D1D1D1;
+            }
+
+            .news-hot-list {
+                padding: 0.625rem 0 0 1.5rem;
+
+                a {
+                    color: #666;
+                }
+            }
+        }
+    }
 }
+
 /* ------------ 媒体查询 ------------ */
