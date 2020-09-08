@@ -49,6 +49,7 @@ body {
     padding: 0;
 }
 
+// 媒体查询
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
@@ -140,6 +141,28 @@ body {
                 }
             }
         }
+    }
+}
+
+// 主体
+.bd .content {
+    padding-bottom: 5rem;
+
+    &.bgc-off-white {
+        background-color: #f9f9f9;
+    }
+
+    &.bgi-1 {
+        background-image: url(../images/background-image-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container>.title {
+        margin: 7.5rem 0 5rem;
+        color: #343434;
+        font-size: 3.125rem;
+        text-align: center;
     }
 }
 

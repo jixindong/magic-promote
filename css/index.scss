@@ -1,11 +1,5 @@
 /* ------------ 主体 ------------ */
 .bd .content {
-    padding-bottom: 2rem;
-
-    &.bgc-off-white {
-        background-color: #f6f6f6;
-    }
-
     &.content-1 {
         .ad {
             width: 100%;
@@ -304,13 +298,6 @@
                 }
             }
         }
-    }
-
-    .container>.title {
-        margin: 7.5rem 0 5rem;
-        color: #343434;
-        font-size: 3.125rem;
-        text-align: center;
     }
 }
 

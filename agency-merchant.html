@@ -6,10 +6,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>代理招商</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/agency-merchant.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/agency-merchant.js"></script>
 </head>
 
 <body>
+    <!-- 导航栏 -->
+    <div id="hd" class="hd">
+        <div class="container">
+            <div class="content row">
+                <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
+                <div class="link-box col-md-8 d-none d-md-flex">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="star-coop.html" class="link">网红合作</a>
+                    <a href="merchant-enter.html" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link active">代理招商</a>
+                    <a href="industry-info.html" class="link">行业资讯</a>
+                    <a href="about-us.html" class="link">关于我们</a>
+                </div>
+                <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
+                </div>
+                <div id="dropdown" class="dropdown col-2 d-md-none">
+                    <div class="menu-btn"></div>
+                </div>
+            </div>
+        </div>
 
+        <div id="hide-nav" class="hide-nav">
+            <div class="nav-list">
+                <a href="index.html" class="link">首页</a>
+                <a href="star-coop.html" class="link">网红合作</a>
+                <a href="merchant-enter.html" class="link">商家入驻</a>
+                <a href="javascript:void(0)" class="link active">代理招商</a>
+                <a href="industry-info.html" class="link">行业资讯</a>
+                <a href="about-us.html" class="link">关于我们</a>
+                <a href="javascript:void(0)" class="link">商家登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 end -->
+
+    <!-- banner -->
+    <div id="banner-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators"></ol>
+        <div class="carousel-inner"></div>
+    </div>
+    <!-- banner end -->
+
+    <!-- 主体 -->
+    <div class="bd">
+        <!-- content-1 -->
+        <div class="content content-1">
+            <div class="container flex-column">
+                <div class="title">成为魔推代理商</div>
+
+                <div class="agency-advantage">
+                    <div class="row">
+                        <div class="col-md-6"><img src="images/ikon-laptop.png"></div>
+                        <div class="advantage-list">
+                            <div class="item">
+                                <div class="title">获取多重收益</div>
+                                <div>达人会员提成+商家套餐提成，收入不断。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">聚焦区域“网红+电商”两端核心资源</div>
+                                <div>供应链产品核心资源+网红直播带货核心资源。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">抢占本地直播电商服务市场</div>
+                                <div>依托魔推庞大达人资源，成就本地电商服务龙头。</div>
+                            </div>
+                            <div class="item">
+                                <div class="title">“四大支持”助您成功</div>
+                                <div>提供技术支持、销售支持、培训支持、运维支持。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content-2 -->
+        <div class="content content-2 bgc-off-white">
+            <div class="container flex-column">
+                <div class="title">立即申请，成为魔推代理商</div>
+
+                <div class="row agency-form">
+                    <div class="item col-md-6">
+                        <div class="title">联系人姓名</div>
+                        <input type="text" placeholder="请输入联系人姓名">
+                    </div>
+                    <div class="item col-md-6">
+                        <div class="title">公司名称</div>
+                        <input type="text" placeholder="请输入公司名称">
+                    </div>
+                    <div class="item col-md-6">
+                        <div class="title">联系人电话</div>
+                        <input type="text" maxlength="11" placeholder="请输入联系人电话">
+                    </div>
+                    <div class="item col-md-6">
+                        <div class="title">公司规模人数</div>
+                        <input type="number" placeholder="请输入公司规模人数">
+                    </div>
+                    <div class="item col-md-12">
+                        <div class="title">所在城市</div>
+                        <input type="text" placeholder="请输入所在城市">
+                    </div>
+                    <div class="item col-md-12">
+                        <div class="title">公司简介</div>
+                        <textarea placeholder="请输入公司简介"></textarea>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="apply-btn">提交申请</a>
+            </div>
+        </div>
+
+        <!-- content-3 -->
+        <div class="content content-3">
+            <div class="container flex-column">
+                <div class="title">申请流程</div>
+
+                <div class="apply-flow">
+                    <div class="item">
+                        <img src="images/icon-note.png">
+                        <div>提交申请</div>
+                    </div>
+                    <img src="images/icon-arrow-next.png" class="arrow-next">
+                    <div class="item">
+                        <img src="images/icon-stamp.png">
+                        <div>线下审核</div>
+                    </div>
+                    <img src="images/icon-arrow-next.png" class="arrow-next">
+                    <div class="item">
+                        <img src="images/icon-partner.png">
+                        <div>洽谈方案</div>
+                    </div>
+                    <img src="images/icon-arrow-next.png" class="arrow-next">
+                    <div class="item">
+                        <img src="images/icon-cooperation.png">
+                        <div>签约合作</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 end -->
+
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="container justify-content-between">
+            <div class="link-box d-none d-md-flex">
+                <div class="link-list-item">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="javascript:void(0)" class="link">公司简介</a>
+                    <a href="javascript:void(0)" class="link">发展历程</a>
+                    <a href="javascript:void(0)" class="link">合作伙伴</a>
+                    <a href="javascript:void(0)" class="link">联系我们</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link">福窝学院</a>
+                    <a href="javascript:void(0)" class="link">智能云设计</a>
+                    <a href="javascript:void(0)" class="link">数字化供应链</a>
+                    <a href="javascript:void(0)" class="link">本地化快装</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link">品牌加盟</a>
+                    <a href="javascript:void(0)" class="link">合伙人加盟</a>
+                    <a href="javascript:void(0)" class="link">APP下载</a>
+                    <a href="javascript:void(0)" class="link">VR产品</a>
+                    <a href="javascript:void(0)" class="link">福币购买</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">代理招商</a>
+                </div>
+            </div>
+            <div class="co-info">
+                <span class="title">购买或合作咨询</span>
+                <span id="co-tel" class="tel"></span>
+                <spa class="title">使用问题咨询（09:00-18:00）</spa>
+                <span id="ask-tel" class="tel"></span>
+                <span>邮箱：<span id="email"></span></span>
+                <span>微博：<span id="micro-blog"></span></span>
+                <span>微信客服：<span id="WeChat-service"></span></span>
+            </div>
+            <div class="qrcode-box"><img id="qrcode-co" src=""></div>
+        </div>
+    </div>
+    <!-- 底部 end -->
 </body>
 
 </html>

@@ -13,6 +13,7 @@
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/merchant-enter.js"></script>
 </head>
 
@@ -23,7 +24,7 @@
             <div class="content row">
                 <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
                 <div class="link-box col-md-8 d-none d-md-flex">
-                    <a href="index.html" class="link active">首页</a>
+                    <a href="index.html" class="link">首页</a>
                     <a href="star-coop.html" class="link">网红合作</a>
                     <a href="javascript:void(0)" class="link active">商家入驻</a>
                     <a href="agency-merchant.html" class="link">代理招商</a>
@@ -283,7 +284,7 @@
         <div class="container justify-content-between">
             <div class="link-box d-none d-md-flex">
                 <div class="link-list-item">
-                    <a href="javascript:void(0)" class="link">首页</a>
+                    <a href="index.html" class="link">首页</a>
                     <a href="javascript:void(0)" class="link">公司简介</a>
                     <a href="javascript:void(0)" class="link">发展历程</a>
                     <a href="javascript:void(0)" class="link">合作伙伴</a>
@@ -310,12 +311,12 @@
             </div>
             <div class="co-info">
                 <span class="title">购买或合作咨询</span>
-                <span class="tel">19901840323</span>
+                <span id="co-tel" class="tel"></span>
                 <spa class="title">使用问题咨询（09:00-18:00）</spa>
-                <span class="tel">13917409692</span>
-                <span>邮箱：service@fuwo.com</span>
-                <span>微博：@爱福窝云设计</span>
-                <span>微信客服：myfuwo</span>
+                <span id="ask-tel" class="tel"></span>
+                <span>邮箱：<span id="email"></span></span>
+                <span>微博：<span id="micro-blog"></span></span>
+                <span>微信客服：<span id="WeChat-service"></span></span>
             </div>
             <div class="qrcode-box"><img id="qrcode-co" src=""></div>
         </div>

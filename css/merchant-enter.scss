@@ -1,17 +1,5 @@
 /* ------------ 主体 ------------ */
 .bd .content {
-    padding-bottom: 5rem;
-
-    &.bgc-off-white {
-        background-color: #f9f9f9;
-    }
-
-    &.bgi-1 {
-        background-image: url(../images/background-image-1.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
     &.content-1 .enter-guide {
         position: relative;
         display: flex;
@@ -170,13 +158,6 @@
         img {
             width: 70%;
         }
-    }
-
-    .container>.title {
-        margin: 7.5rem 0 5rem;
-        color: #343434;
-        font-size: 3.125rem;
-        text-align: center;
     }
 }
 

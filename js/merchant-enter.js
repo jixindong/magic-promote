@@ -1,31 +1,14 @@
-let starCoopFunc = ((win) => {
-    let baseURL = 'http://192.168.1.249:8080/';
-
-    // 事件绑定
-    function eventBind() {
-        // 改变导航栏背景色
-        let hd = document.querySelector('#hd');
-        let bannerHeight = document.querySelector('#banner-carousel').offSetHeight || 800;
-        win.onscroll = () => {
-            let scrollTop = document.documentElement.scrollTop || win.pageYOffset || document.body.scrollTop;
-            if (scrollTop >= bannerHeight) {
-                hd.classList.add('hd-theme-color');
-            } else {
-                hd.classList.remove('hd-theme-color');
-            }
-        };
-    };
-
+let merchantEnterFunc = (() => {
     // 获取网站基本信息
     function fetchWebBasicInfo() {
         $.ajax({
-            url: baseURL + '/home/index',
+            url: baseURL + 'home/index',
             type: 'POST',
             data: {},
             dataType: 'json',
             success: (res) => {
                 // banner
-                let imgs = res.wh.map(e => e.path);
+                let imgs = res.sj.map(e => e.path);
                 imgs.forEach((e, i) => {
                     if (i === 0) {
                         $('#banner-carousel .carousel-indicators').append('<li data-target="#banner-carousel" data-slide-to="0" class="active"></li>');
@@ -35,17 +18,28 @@ let starCoopFunc = ((win) => {
                         $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"></div>`);
                     }
                 });
+                // 合作电话
+                $('#co-tel').text(res.hz_phone);
+                // 咨询电话
+                $('#ask-tel').text(res.zx_phone);
+                // 公司邮箱
+                $('#email').text(res.email);
+                // 公司微博
+                $('#micro-blog').text(res.wb);
+                // 公司微信客服
+                $('#WeChat-service').text(res.cont_name);
+                // 公司二维码
+                $('#qrcode-co').attr('src', res.gs_ewm);
             }
         });
     };
 
     return {
-        eventBind,
         fetchWebBasicInfo
     }
-})(window);
+})();
 
 $(() => {
-    starCoopFunc.eventBind(); // 事件绑定
-    starCoopFunc.fetchWebBasicInfo(); // 获取网站基本信息
+    commonFunc.handleHdBgc(); // 改变导航栏背景色
+    merchantEnterFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

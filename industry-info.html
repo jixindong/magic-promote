@@ -6,10 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>行业资讯</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/industry-info.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/industry-info.js"></script>
 </head>
 
 <body>
+    <!-- 导航栏 -->
+    <div id="hd" class="hd">
+        <div class="container">
+            <div class="content row">
+                <div class="col-3 col-md-2"><img src="images/logo-1.png" class="logo"></div>
+                <div class="link-box col-md-8 d-none d-md-flex">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="star-coop.html" class="link">网红合作</a>
+                    <a href="merchant-enter.html" class="link">商家入驻</a>
+                    <a href="agency-merchant.html" class="link">代理招商</a>
+                    <a href="javascript:void(0)" class="link active">行业资讯</a>
+                    <a href="about-us.html" class="link">关于我们</a>
+                </div>
+                <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
+                </div>
+                <div id="dropdown" class="dropdown col-2 d-md-none">
+                    <div class="menu-btn"></div>
+                </div>
+            </div>
+        </div>
 
+        <div id="hide-nav" class="hide-nav">
+            <div class="nav-list">
+                <a href="index.html" class="link">首页</a>
+                <a href="star-coop.html" class="link">网红合作</a>
+                <a href="merchant-enter.html" class="link">商家入驻</a>
+                <a href="agency-merchant.html" class="link">代理招商</a>
+                <a href="javascript:void(0)" class="link active">行业资讯</a>
+                <a href="about-us.html" class="link">关于我们</a>
+                <a href="javascript:void(0)" class="link">商家登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 end -->
+
+    <!-- banner -->
+    <div id="banner" class="banner"><img src="images/banner-industry-info.png"></div>
+    <!-- banner end -->
+
+    <!-- 主体 -->
+    <div class="bd">
+        <div class="container">
+            <div class="info-lf">
+                <div class="info-tabs">
+                    <a href="javascript:void(0)" class="item active">全部</a>
+                    <a href="javascript:void(0)" class="item">热点新闻</a>
+                </div>
+
+                <div class="info-list">
+                    <div class="item">
+                        <img src="images/ad-phone.png">
+                        <div class="info">
+                            <div class="title">让你微商城粉丝增长的技巧！</div>
+                            <div class="text">【启博导读】现在多数企业都已经创建了微商城，可每日客流量却无很大地增高，这是为何呢?更大的缘由还是在微微微微微微微微微微微微微微微微微微微微
+                            </div>
+                            <div>2020.09.05</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-rt">
+                <div class="search-box">
+                    <input type="text" placeholder="请输入关键字">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 end -->
+
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="container justify-content-between">
+            <div class="link-box d-none d-md-flex">
+                <div class="link-list-item">
+                    <a href="index.html" class="link">首页</a>
+                    <a href="javascript:void(0)" class="link">公司简介</a>
+                    <a href="javascript:void(0)" class="link">发展历程</a>
+                    <a href="javascript:void(0)" class="link">合作伙伴</a>
+                    <a href="javascript:void(0)" class="link">联系我们</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">网红合作</a>
+                    <a href="javascript:void(0)" class="link">福窝学院</a>
+                    <a href="javascript:void(0)" class="link">智能云设计</a>
+                    <a href="javascript:void(0)" class="link">数字化供应链</a>
+                    <a href="javascript:void(0)" class="link">本地化快装</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">商家入驻</a>
+                    <a href="javascript:void(0)" class="link">品牌加盟</a>
+                    <a href="javascript:void(0)" class="link">合伙人加盟</a>
+                    <a href="javascript:void(0)" class="link">APP下载</a>
+                    <a href="javascript:void(0)" class="link">VR产品</a>
+                    <a href="javascript:void(0)" class="link">福币购买</a>
+                </div>
+                <div class="link-list-item">
+                    <a href="javascript:void(0)" class="link">代理招商</a>
+                </div>
+            </div>
+            <div class="co-info">
+                <span class="title">购买或合作咨询</span>
+                <span id="co-tel" class="tel"></span>
+                <spa class="title">使用问题咨询（09:00-18:00）</spa>
+                <span id="ask-tel" class="tel"></span>
+                <span>邮箱：<span id="email"></span></span>
+                <span>微博：<span id="micro-blog"></span></span>
+                <span>微信客服：<span id="WeChat-service"></span></span>
+            </div>
+            <div class="qrcode-box"><img id="qrcode-co" src=""></div>
+        </div>
+    </div>
+    <!-- 底部 end -->
 </body>
 
 </html>
