@@ -1,4 +1,14 @@
 let agencyMerchantFunc = (() => {
+    // 事件绑定
+    function eventBind() {
+        // 代理申请表单验证
+        $('#agency-form').submit((event) => {
+            let agencyForm = $(this);
+            event.preventDefault();
+            commitAgencyApply(); // 提交代理申请
+        });
+    };
+
     // 获取网站基本信息
     function fetchWebBasicInfo() {
         $.ajax({
@@ -36,13 +46,46 @@ let agencyMerchantFunc = (() => {
         });
     };
 
+    // 提交代理申请
+    function commitAgencyApply() {
+        let gsmc = $('#gsmc').val(); // 公司名称
+        let gsjj = $('#gsjj').val(); // 公司简介
+        let gsgmrs = $('#gsgmrs').val(); // 公司规模人数
+        let szcs = $('#szcs').val(); // 所在城市
+        let lxrxm = $('#lxrxm').val(); // 联系人姓名
+        let lxrdh = $('#lxrdh').val(); // 联系人电话
+
+        $.ajax({
+            url: baseURL + 'agencyapplication/add',
+            type: 'POST',
+            data: {
+                'company': gsmc,
+                'introduce': gsjj,
+                'people': gsgmrs,
+                'city': szcs,
+                'username': lxrxm,
+                'phone': lxrdh,
+            },
+            dataType: 'json',
+            success: (res) => {
+                if (res.code === 200) {
+                    alert('提交成功！');
+                    $('#agency-form')[0].reset(); // 重置代理申请表单
+                } else {
+                    alert('提交失败，请重试！');
+                }
+            }
+        });
+    };
+
     return {
+        eventBind,
         fetchWebBasicInfo
     }
 })();
 
 $(() => {
-    commonFunc.handleHdBgc(); // 改变导航栏背景色
-    commonFunc.handleBaiduBridge(); // 设置百度商桥
+    commonFunc.handleMerchantEnter(); // 商家入驻
+    agencyMerchantFunc.eventBind(); // 事件绑定
     agencyMerchantFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

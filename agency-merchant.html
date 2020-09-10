@@ -98,35 +98,40 @@
         <div class="content content-2 bgc-off-white">
             <div class="container flex-column">
                 <div class="title">立即申请，成为魔推代理商</div>
-
-                <div class="row agency-form">
-                    <div class="item col-md-6">
-                        <div class="title">联系人姓名</div>
-                        <input type="text" placeholder="请输入联系人姓名">
+                <form id="agency-form" class="agency-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 pr-5">
+                            <label for="lxrxm">联系人姓名：</label>
+                            <input type="text" id="lxrxm" class="form-control" placeholder="请输入联系人姓名" autocomplete="off"
+                                required>
+                        </div>
+                        <div class="form-group col-md-6 pl-5">
+                            <label for="gsmc">公司名称：</label>
+                            <input type="text" id="gsmc" class="form-control" placeholder="请输入公司名称" autocomplete="off"
+                                required>
+                        </div>
+                        <div class="form-group col-md-6 pr-5">
+                            <label for="lxrdh">联系人电话：</label>
+                            <input type="number" id="lxrdh" class="form-control" placeholder="请输入联系人电话"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-5">
+                            <label for="gsgmrs">公司规模人数：</label>
+                            <input type="text" id="gsgmrs" class="form-control" placeholder="请输入公司规模人数"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="szcs">所在城市：</label>
+                            <input type="text" id="szcs" class="form-control" placeholder="请输入所在城市" autocomplete="off"
+                                required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="gsjj">公司简介：</label>
+                            <textarea class="form-control" rows="3" placeholder="请输入公司简介" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交</button>
                     </div>
-                    <div class="item col-md-6">
-                        <div class="title">公司名称</div>
-                        <input type="text" placeholder="请输入公司名称">
-                    </div>
-                    <div class="item col-md-6">
-                        <div class="title">联系人电话</div>
-                        <input type="text" maxlength="11" placeholder="请输入联系人电话">
-                    </div>
-                    <div class="item col-md-6">
-                        <div class="title">公司规模人数</div>
-                        <input type="number" placeholder="请输入公司规模人数">
-                    </div>
-                    <div class="item col-md-12">
-                        <div class="title">所在城市</div>
-                        <input type="text" placeholder="请输入所在城市">
-                    </div>
-                    <div class="item col-md-12">
-                        <div class="title">公司简介</div>
-                        <textarea placeholder="请输入公司简介"></textarea>
-                    </div>
-                </div>
-
-                <a href="javascript:void(0)" class="apply-btn">提交申请</a>
+                </form>
             </div>
         </div>
 

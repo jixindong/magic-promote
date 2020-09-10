@@ -18,37 +18,21 @@
         }
     }
 
-    &.content-2 {
-        .agency-form {
-            font-size: 1.375rem;
+    &.content-2 .agency-form {
 
-            .item {
-                margin-bottom: 1.875rem;
-
-                input[type='text'],
-                input[type='number'],
-                textarea {
-                    padding: 0.625rem;
-                    width: 100%;
-                    border: 0.0625rem solid #D1D1D1;
-                    border-radius: 0.3125rem;
-                }
-
-                .title {
-                    margin-bottom: 0.625rem;
-                    color: #333;
-                }
-            }
+        input[type='text'],
+        input[type='number'],
+        textarea {
+            padding: 0.625rem;
+            height: auto;
+            border-radius: 0.625rem;
         }
 
-        .apply-btn {
-            margin: 3.125rem auto 0;
+        .btn {
+            margin: 6.25rem auto 0;
             width: 12.5rem;
-            line-height: 3rem;
-            color: #fff;
-            text-align: center;
-            background-color: #2797FF;
-            border-radius: 0.625rem;
+            line-height: 1.875rem;
+            font-size: 1.25rem;
         }
     }
 

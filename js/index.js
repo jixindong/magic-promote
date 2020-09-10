@@ -1,12 +1,6 @@
 let homeFunc = (() => {
     // 事件绑定
     function eventBind() {
-        // 显示、隐藏导航栏
-        $('#dropdown').click(() => {
-            $('#hd').addClass('hd-theme-color');
-            $('#hide-nav').slideToggle();
-        });
-
         // 服务体系鼠标悬浮事件
         $('#serviceSys .item').each(function () {
             $(this).hover(() => {
@@ -28,22 +22,6 @@ let homeFunc = (() => {
                 newsList[i].classList.add('active');
             };
         };
-
-        // 商家入驻弹窗关闭回调
-        $('#merchantEnter').on('hide.bs.modal', () => {
-            $('#merchant-enter-form')[0].reset(); // 重置商家入驻表单
-        });
-
-        // 商家入驻表单验证
-        $('#merchant-enter-form').submit((event) => {
-            let merchantEnterForm = $(this);
-            event.preventDefault();
-            if (merchantEnterForm[0].checkValidity() === false) {
-                event.stopPropagation();
-            } else {
-                commitMerchantEnter(); // 提交商家入驻
-            }
-        });
     };
 
     // 获取网站基本信息
@@ -87,76 +65,14 @@ let homeFunc = (() => {
         });
     };
 
-    // 提交商家入驻
-    function commitMerchantEnter() {
-        let coName = $('#coName').val(); // 公司名称
-        let dpmc = $('#dpmc').val(); // 店铺名称
-        let nxse = $('#nxse').val(); // 年销售额
-        let lxr = $('#lxr').val(); // 联系人
-        let sjhm = $('#sjhm').val(); // 手机号码
-        // 主营类目
-        let zylm = '';
-        let zylmObj = document.getElementsByName('zylm');
-        for (i in zylmObj) {
-            if (zylmObj[i].checked) {
-                zylm += `${zylmObj[i].value},`;
-            }
-        }
-        zylm = zylm.slice(0, -1);
-        // 商家类型
-        let sjlx = '';
-        let sjlxObj = document.getElementsByName('sjlx');
-        for (i in sjlxObj) {
-            if (sjlxObj[i].checked) {
-                sjlx = sjlxObj[i].value;
-            }
-        }
-        // 电商平台
-        let dspt = '';
-        let dsptObj = document.getElementsByName('dspt');
-        for (i in dsptObj) {
-            if (dsptObj[i].checked) {
-                dspt += `${dsptObj[i].value},`;
-            }
-        }
-        dspt = dspt.slice(0, -1);
-
-        $.ajax({
-            url: baseURL + 'businessapplication/add',
-            type: 'POST',
-            data: {
-                'company': coName,
-                'shop': dpmc,
-                'salesVolume': nxse,
-                'username': lxr,
-                'phone': sjhm,
-                'main': zylm,
-                'type': sjlx,
-                'isopen': dspt
-            },
-            dataType: 'json',
-            success: (res) => {
-                if (res.code === 200) {
-                    alert('提交成功！');
-                    $('#merchant-enter-form')[0].reset(); // 重置商家入驻表单
-                    $('#merchantEnter').modal('hide'); // 关闭商家入驻弹窗
-                } else {
-                    alert('提交失败，请重试！');
-                }
-            }
-        });
-    };
-
     return {
         eventBind,
-        fetchWebBasicInfo,
-        commitMerchantEnter
+        fetchWebBasicInfo
     };
 })();
 
 $(() => {
-    commonFunc.handleHdBgc(); // 改变导航栏背景色
-    commonFunc.handleBaiduBridge(); // 设置百度商桥
+    commonFunc.handleMerchantEnter(); // 商家入驻
     homeFunc.eventBind(); // 事件绑定
     homeFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

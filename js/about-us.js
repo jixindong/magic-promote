@@ -103,8 +103,6 @@ let aboutUsFunc = (() => {
 })();
 
 $(() => {
-    commonFunc.handleHdBgc(); // 改变导航栏背景色
-    commonFunc.handleBaiduBridge(); // 设置百度商桥
     aboutUsFunc.eventBind(); // 事件绑定
     aboutUsFunc.fetchWebBasicInfo(); // 获取网站基本信息
     aboutUsFunc.fetchAboutUsInfo(); // 获取关于我们信息

@@ -1,0 +1,45 @@
+/* ------------ banner ------------ */
+.banner img {
+    width: 100%;
+}
+
+/* ------------ 主体 ------------ */
+.bd {
+    padding: 3.125rem 0;
+    background-color: #f9f9f9;
+
+    .container {
+        padding: 3.125rem 0;
+        min-height: 37.5rem;
+        background-color: #fff;
+        box-shadow: 0.1875rem 0.1875rem 0.625rem #cccccc80;
+
+        .info-title {
+            padding: 0 1.875rem;
+            font-size: 2.5rem;
+            text-align: center;
+            word-break: break-word;
+        }
+
+        .info-date {
+            padding: 0.625rem 1.875rem 0 0;
+            text-align: right;
+        }
+
+        .info-poster {
+            padding: 1.25rem;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .info-content {
+            padding: 0 3.125rem;
+            color: #666;
+        }
+    }
+}
+
+/* ------------ 媒体查询 ------------ */

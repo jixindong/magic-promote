@@ -71,8 +71,7 @@ let starCoopFunc = (() => {
 })();
 
 $(() => {
-    commonFunc.handleHdBgc(); // 改变导航栏背景色
-    commonFunc.handleBaiduBridge(); // 设置百度商桥
+    commonFunc.handleMerchantEnter(); // 商家入驻
     starCoopFunc.handleSwiper(); // 初始化swiper
     starCoopFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

@@ -10,12 +10,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.min.css">
-    <link rel="stylesheet" href="css/industry-info.min.css">
+    <link rel="stylesheet" href="css/industry-info-detail.min.css">
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/industry-info.js"></script>
+    <script src="./js/industry-info-detail.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                     <a href="star-coop.html" class="link">网红合作</a>
                     <a href="merchant-enter.html" class="link">商家入驻</a>
                     <a href="agency-merchant.html" class="link">代理招商</a>
-                    <a href="javascript:void(0)" class="link active">行业资讯</a>
+                    <a href="industry-info.html" class="link">行业资讯</a>
                     <a href="about-us.html" class="link">关于我们</a>
                 </div>
                 <div class="login-box col-md-2 d-none d-md-flex"><a href="javascript:void(0)" class="login-btn">商家登录</a>
@@ -46,7 +46,7 @@
                 <a href="star-coop.html" class="link">网红合作</a>
                 <a href="merchant-enter.html" class="link">商家入驻</a>
                 <a href="agency-merchant.html" class="link">代理招商</a>
-                <a href="javascript:void(0)" class="link active">行业资讯</a>
+                <a href="industry-info.html" class="link">行业资讯</a>
                 <a href="about-us.html" class="link">关于我们</a>
                 <a href="javascript:void(0)" class="link">商家登录</a>
             </div>
@@ -60,27 +60,11 @@
 
     <!-- 主体 -->
     <div class="bd">
-        <div class="container">
-            <div class="info-lf">
-                <div id="info-tabs" class="info-tabs">
-                    <a href="javascript:void(0)" class="item active">全部</a>
-                    <a href="javascript:void(0)" class="item">热点新闻</a>
-                </div>
-
-                <div id="info-list" class="info-list"></div>
-            </div>
-
-            <div class="info-rt">
-                <div class="search-box">
-                    <input type="text" placeholder="请输入关键字" id="search-info">
-                    <img src="images/icon-search.png" id="search-btn">
-                </div>
-
-                <div class="news-hot">
-                    <div class="title">热点新闻</div>
-                    <ul id="news-hot-list" class="news-hot-list"></ul>
-                </div>
-            </div>
+        <div class="container flex-column">
+            <div id="info-title" class="info-title"></div>
+            <div id="info-date" class="info-date"></div>
+            <div id="info-poster" class="info-poster"><img src=""></div>
+            <div id="info-content" class="info-content"></div>
         </div>
     </div>
     <!-- 主体 end -->
