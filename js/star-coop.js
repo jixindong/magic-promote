@@ -30,13 +30,15 @@ let starCoopFunc = (() => {
     // 获取网站基本信息
     function fetchWebBasicInfo() {
         $.ajax({
-            url: baseURL + 'home/index',
+            url: baseURL + 'home/whList',
             type: 'POST',
             data: {},
             dataType: 'json',
             success: (res) => {
+                // logo
+                $('#logo').attr('src', res.content.logo);
                 // banner
-                let imgs = res.wh.map(e => e.path);
+                let imgs = res.content.wh.map(e => e.path);
                 imgs.forEach((e, i) => {
                     if (i === 0) {
                         $('#banner-carousel .carousel-indicators').append('<li data-target="#banner-carousel" data-slide-to="0" class="active"></li>');
@@ -46,18 +48,18 @@ let starCoopFunc = (() => {
                         $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"></div>`);
                     }
                 });
-                // 合作电话
-                $('#co-tel').text(res.hz_phone);
-                // 咨询电话
-                $('#ask-tel').text(res.zx_phone);
+                // 公司地址
+                $('#coSite').text(res.content.contory_address);
+                // 联系方式
+                $('#coTel').text(res.content.hz_phone);
                 // 公司邮箱
-                $('#email').text(res.email);
-                // 公司微博
-                $('#micro-blog').text(res.wb);
-                // 公司微信客服
-                $('#WeChat-service').text(res.cont_name);
+                $('#coEmail').text(res.content.email);
+                // 版权所有
+                $('#coCopyright').text(res.content.record_no);
                 // 公司二维码
-                $('#qrcode-co').attr('src', res.gs_ewm);
+                $('#coQrcode').attr('src', res.content.gs_ewm);
+                // 客服二维码
+                $('#serviceQrcode').attr('src', res.content.cont_ewm);
             }
         });
     };
@@ -70,6 +72,7 @@ let starCoopFunc = (() => {
 
 $(() => {
     commonFunc.handleHdBgc(); // 改变导航栏背景色
+    commonFunc.handleBaiduBridge(); // 设置百度商桥
     starCoopFunc.handleSwiper(); // 初始化swiper
     starCoopFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

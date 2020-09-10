@@ -1,5 +1,6 @@
-let baseURL = 'http://mtht.waszn.com:8001/';
+let baseURL = 'http://mtht.waszn.com:8001/'; // baseURL
 
+// 公共方法
 let commonFunc = ((win) => {
     // 改变导航栏背景色
     function handleHdBgc() {
@@ -13,32 +14,17 @@ let commonFunc = ((win) => {
             }
         };
     };
-    // 获取网站基本信息
-    function fetchWebBasicInfo() {
-        $.ajax({
-            url: baseURL + 'home/index',
-            type: 'POST',
-            data: {},
-            dataType: 'json',
-            success: (res) => {
-                // 合作电话
-                $('#co-tel').text(res.hz_phone);
-                // 咨询电话
-                $('#ask-tel').text(res.zx_phone);
-                // 公司邮箱
-                $('#email').text(res.email);
-                // 公司微博
-                $('#micro-blog').text(res.wb);
-                // 公司微信客服
-                $('#WeChat-service').text(res.cont_name);
-                // 公司二维码
-                $('#qrcode-co').attr('src', res.gs_ewm);
-            }
-        });
+
+    // 设置百度商桥
+    function handleBaiduBridge() {
+        let baiduBridge = document.createElement("script");
+        let s = document.getElementsByTagName("script")[0];
+        baiduBridge.src = 'https://hm.baidu.com/hm.js?d0f59d0259dd9c3316d8700d0e5c8816';
+        s.parentNode.insertBefore(baiduBridge, s);
     };
 
     return {
         handleHdBgc,
-        fetchWebBasicInfo
-    }
+        handleBaiduBridge
+    };
 })(window);
