@@ -39,7 +39,6 @@ let commonFunc = ((win) => {
         });
         // 商家入驻表单验证
         $('#merchant-enter-form').submit((event) => {
-            let merchantEnterForm = $(this);
             event.preventDefault();
             commitMerchantEnter(); // 提交商家入驻
         });
@@ -105,12 +104,60 @@ let commonFunc = ((win) => {
         });
     };
 
+    // 网红申请
+    function handleStarApply() {
+        // 商家入驻弹窗关闭回调
+        $('#starApply').on('hide.bs.modal', () => {
+            $('#star-apply-form')[0].reset(); // 重置商家入驻表单
+        });
+        // 商家入驻表单验证
+        $('#star-apply-form').submit((event) => {
+            event.preventDefault();
+            commitStarApply(); // 提交网红申请
+        });
+    };
+
+    // 提交网红申请
+    function commitStarApply() {
+        let starName = $('#star-name').val(); // 姓名
+        let starDyid = $('#star-dyid').val(); // 抖音ID
+        let starDync = $('#star-dync').val(); // 抖音昵称
+        let starFans = $('#star-fans').val(); // 粉丝数
+        let starTel = $('#star-tel').val(); // 手机
+        let starWx = $('#star-wx').val(); // 微信号
+
+        $.ajax({
+            url: baseURL + 'businessapplication/add',
+            type: 'POST',
+            data: {
+                // 'company': coName,
+                // 'shop': dpmc,
+                // 'salesVolume': nxse,
+                // 'username': lxr,
+                // 'phone': sjhm,
+                // 'main': zylm,
+                // 'type': sjlx,
+                // 'isopen': dspt
+            },
+            dataType: 'json',
+            success: (res) => {
+                if (res.code === 200) {
+                    alert('提交成功！');
+                    $('#star-apply-form')[0].reset(); // 重置商家入驻表单
+                    $('#starApply').modal('hide'); // 关闭商家入驻弹窗
+                } else {
+                    alert('提交失败，请重试！');
+                }
+            }
+        });
+    };
+
     return {
         handleHdBgc,
         handleHdVisibility,
         handleBaiduBridge,
         handleMerchantEnter,
-        commitMerchantEnter
+        handleStarApply
     };
 })(window);
 

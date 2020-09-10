@@ -55,7 +55,7 @@
     <!-- 导航栏 end -->
 
     <!-- banner -->
-    <div id="banner-carousel" class="carousel slide" data-ride="carousel">
+    <div id="banner-carousel" class="carousel slide banner-carousel" data-ride="carousel">
         <ol class="carousel-indicators"></ol>
         <div class="carousel-inner"></div>
     </div>
@@ -159,6 +159,179 @@
                     <div class="item">
                         <img src="images/icon-cooperation.png">
                         <div>签约合作</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商家入驻 弹窗 -->
+        <div class="modal fade" id="merchantEnter" tabindex="-1" role="dialog" aria-labelledby="merchantEnterLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="merchantEnterLabel">商家入驻</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="merchant-enter-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="coName">公司名称：</label>
+                                    <input type="text" id="coName" class="form-control" placeholder="请输入公司名称"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="dpmc">店铺名称：</label>
+                                    <input type="text" id="dpmc" class="form-control" placeholder="请输入店铺名称"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="nxse">年销售额：</label>
+                                    <input type="text" id="nxse" class="form-control" placeholder="请输入年销售额"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lxr">联系人：</label>
+                                    <input type="text" id="lxr" class="form-control" placeholder="请输入联系人"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="sjhm">手机号码：</label>
+                                    <input type="number" id="sjhm" class="form-control" placeholder="请输入手机号码"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <div>主营类目：</div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="zylm" value="美妆个护" class="form-check-input">
+                                            <span>美妆个护</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="zylm" value="家居百货" class="form-check-input">
+                                            <span>家居百货</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="zylm" value="服饰箱包" class="form-check-input">
+                                            <span>服饰箱包</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="zylm" value="食品生鲜" class="form-check-input">
+                                            <span>食品生鲜</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="zylm" value="其他" class="form-check-input">
+                                            <span>其他</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div>商家类型：</div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="sjlx" value="工厂">工厂</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="sjlx" value="代理商">代理商</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="sjlx" value="经销商">经销商</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div>是否开通电商平台：</div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="dspt" value="天猫/淘宝" class="form-check-input">
+                                            <span>天猫/淘宝</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="dspt" value="京东" class="form-check-input">
+                                            <span>京东</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="dspt" value="拼多多" class="form-check-input">
+                                            <span>拼多多</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="dspt" value="其他" class="form-check-input">
+                                            <span>其他</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 offset-md-4"><button type="submit"
+                                        class="btn btn-primary btn-block">提交</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 网红申请 弹窗 -->
+        <div class="modal fade" id="starApply" tabindex="-1" role="dialog" aria-labelledby="merchantEnterLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="merchantEnterLabel">网红申请</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="star-apply-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="star-name">姓名：</label>
+                                    <input type="text" id="star-name" class="form-control" placeholder="请输入姓名"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-dyid">抖音ID：</label>
+                                    <input type="text" id="star-dyid" class="form-control" placeholder="请输入姓名"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-dync">抖音昵称：</label>
+                                    <input type="text" id="star-dync" class="form-control" placeholder="请输入抖音昵称"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-fans">粉丝数：</label>
+                                    <input type="text" id="star-fans" class="form-control" placeholder="请输入粉丝数"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-tel">手机：</label>
+                                    <input type="text" id="star-tel" class="form-control" placeholder="请输入手机"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-wx">微信号：</label>
+                                    <input type="text" id="star-wx" class="form-control" placeholder="请输入微信号"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="col-md-4 offset-md-4"><button type="submit"
+                                        class="btn btn-primary btn-block">提交</button></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

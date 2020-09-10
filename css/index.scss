@@ -2,23 +2,41 @@
 .bd .content {
     &.content-1 {
         .ad {
+            padding-left: 5%;
             width: 100%;
         }
 
         .msg-list {
             display: flex;
             flex-flow: column nowrap;
-            max-width: 31.25rem;
+            justify-content: center;
+            padding-left: 2rem;
             height: 100%;
 
-            .title {
-                color: #343434;
-                font-size: 1.25rem;
-            }
+            .item {
+                margin: 0.9375rem 0;
+                font-size: 1.125rem;
 
-            .text {
-                padding: 0.625rem 0.625rem 0.3125rem;
-                color: #999;
+                .title {
+                    position: relative;
+                    color: #343434;
+                    font-size: 1.625rem;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        content: '';
+                        background-color: #2897FF;
+                        border-radius: 50%;
+                        transform: translate(-1.375rem,-50%);
+                    }
+                }
+
+                .text {
+                    padding: 0.625rem 0.625rem 0.3125rem;
+                    color: #999;
+                }
             }
         }
     }
@@ -276,10 +294,11 @@
                 .info-list {
                     display: flex;
                     flex-flow: column nowrap;
+                    height: 100%;
+                    overflow: auto;
 
                     .info-item {
                         display: flex;
-                        justify-content: space-between;
                         align-items: center;
                         margin-bottom: 1.25rem;
 

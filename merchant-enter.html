@@ -55,7 +55,7 @@
     <!-- 导航栏 end -->
 
     <!-- banner -->
-    <div id="banner-carousel" class="carousel slide" data-ride="carousel">
+    <div id="banner-carousel" class="carousel slide banner-carousel" data-ride="carousel">
         <ol class="carousel-indicators"></ol>
         <div class="carousel-inner"></div>
     </div>
@@ -348,6 +348,59 @@
                                             <span>其他</span>
                                         </label>
                                     </div>
+                                </div>
+                                <div class="col-md-4 offset-md-4"><button type="submit"
+                                        class="btn btn-primary btn-block">提交</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 网红申请 弹窗 -->
+        <div class="modal fade" id="starApply" tabindex="-1" role="dialog" aria-labelledby="merchantEnterLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="merchantEnterLabel">网红申请</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="star-apply-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="star-name">姓名：</label>
+                                    <input type="text" id="star-name" class="form-control" placeholder="请输入姓名"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-dyid">抖音ID：</label>
+                                    <input type="text" id="star-dyid" class="form-control" placeholder="请输入姓名"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-dync">抖音昵称：</label>
+                                    <input type="text" id="star-dync" class="form-control" placeholder="请输入抖音昵称"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-fans">粉丝数：</label>
+                                    <input type="text" id="star-fans" class="form-control" placeholder="请输入粉丝数"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-tel">手机：</label>
+                                    <input type="text" id="star-tel" class="form-control" placeholder="请输入手机"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="star-wx">微信号：</label>
+                                    <input type="text" id="star-wx" class="form-control" placeholder="请输入微信号"
+                                        autocomplete="off" required>
                                 </div>
                                 <div class="col-md-4 offset-md-4"><button type="submit"
                                         class="btn btn-primary btn-block">提交</button></div>
