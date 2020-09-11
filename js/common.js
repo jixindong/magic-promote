@@ -127,24 +127,22 @@ let commonFunc = ((win) => {
         let starWx = $('#star-wx').val(); // 微信号
 
         $.ajax({
-            url: baseURL + 'businessapplication/add',
+            url: baseURL + 'talentapplication/add',
             type: 'POST',
             data: {
-                // 'company': coName,
-                // 'shop': dpmc,
-                // 'salesVolume': nxse,
-                // 'username': lxr,
-                // 'phone': sjhm,
-                // 'main': zylm,
-                // 'type': sjlx,
-                // 'isopen': dspt
+                'username': starName,
+                'dyId': starDyid,
+                'dyName': starDync,
+                'fans': starFans,
+                'phone': starTel,
+                'wx': starWx
             },
             dataType: 'json',
             success: (res) => {
                 if (res.code === 200) {
                     alert('提交成功！');
-                    $('#star-apply-form')[0].reset(); // 重置商家入驻表单
-                    $('#starApply').modal('hide'); // 关闭商家入驻弹窗
+                    $('#star-apply-form')[0].reset(); // 重置网红申请表单
+                    $('#starApply').modal('hide'); // 关闭网红申请弹窗
                 } else {
                     alert('提交失败，请重试！');
                 }
