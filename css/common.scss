@@ -60,7 +60,7 @@ body {
 // 导航栏
 .hd {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: #2897ff80;
     z-index: 16;
     transition: background-color 1s;
@@ -148,15 +148,14 @@ body {
 .banner-carousel .btn {
     position: absolute;
     bottom: 18%;
-    left: 20%;
-    padding: 0.875rem 2rem;
+    left: 18%;
+    padding: 0.625rem 2rem;
     font-size: 1.25rem;
     background-image: linear-gradient(135deg, #fc7618, #feb124);
     border-radius: 1.875rem;
 
     &.link {
-        bottom: 18%;
-        left: 29%;
+        left: 28%;
         color: #fff;
     }
 }
@@ -242,9 +241,139 @@ body {
 }
 
 // 媒体查询
+@media (max-width: 1500px) {
+
+    // banner
+    .banner-carousel .btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 1.125rem;
+
+        &.link {
+            left: 29%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    // banner
+    .banner-carousel .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    // 主体
+    .bd .content .container>.title {
+        margin: 5rem 0 4rem;
+        font-size: 2.75rem;
+    }
+
+    // 底部
+    .ft .lf .link-list a+a {
+        margin-left: 1.875rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    // 主体
+    .bd .content .container>.title {
+        margin: 3rem 0 2rem;
+        font-size: 2rem;
+    }
+
+    // 底部
+    .ft {
+        .lf .link-list a {
+            font-size: 1rem;
+
+            &+a {
+                margin-left: 1.25rem;
+
+                &::before {
+                    top: 0.125rem;
+                    left: -0.625rem;
+                }
+            }
+        }
+
+        .rt .qrcode img {
+            margin: 0 0.625rem 1.25rem;
+            width: 5.625rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    // banner
+    .banner-carousel .btn {
+        bottom: 15%;
+
+        &.link {
+            left: 33%;
+        }
+    }
+
+    // 主体
+    .bd .content .container>.title {
+        margin: 2.5rem 0 1.875rem;
+        font-size: 1.875rem;
+    }
+
+    // 底部
+    .ft {
+        padding: 1.875rem 0;
+
+        .container {
+            flex-flow: column nowrap;
+
+            .lf .msg-list {
+                margin: 1.25rem 0;
+                font-size: 0.875rem;
+            }
+
+            .rt {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
 @media (max-width: 576px) {
+
+    // 导航栏
     .hd .container .content .logo {
         position: relative;
         right: -1.25rem;
+    }
+
+    // banner
+    .banner-carousel .btn {
+        line-height: 1rem;
+        font-size: 0.875rem;
+
+        &.link {
+            left: 40%;
+        }
+    }
+
+    // 主体
+    .bd .content .container>.title {
+        margin: 1.25rem 0;
+        font-size: 1.5rem;
+    }
+
+    // 底部
+    .ft .lf .link-list {
+        justify-content: space-around;
+
+        a+a {
+            margin: 0;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }

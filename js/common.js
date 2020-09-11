@@ -162,5 +162,5 @@ let commonFunc = ((win) => {
 $(() => {
     commonFunc.handleHdBgc(); // 改变导航栏背景色
     commonFunc.handleHdVisibility(); // 显示、隐藏导航栏
-    // commonFunc.handleBaiduBridge(); // 设置百度商桥
+    commonFunc.handleBaiduBridge(); // 设置百度商桥
 });

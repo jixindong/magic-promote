@@ -63,6 +63,8 @@
     }
 
     .co-contact {
+        margin: 0;
+
         .construction {
             width: 80%;
         }
@@ -102,3 +104,65 @@
 }
 
 /* ------------ 媒体查询 ------------ */
+@media (max-width: 992px) {
+
+    // 主体
+    .bd .container {
+        >.title {
+            margin: 4.375rem 0 3.125rem;
+            font-size: 1.875rem;
+        }
+
+        .co-contact {
+            .construction {
+                width: 100%;
+            }
+
+            .contact-list .item {
+                margin-bottom: 1.25rem;
+
+                span {
+                    max-width: 10rem;
+                }
+
+                .icon {
+                    margin-right: 0.625rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+
+                .title {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    // 主体
+    .bd .container {
+        >.title {
+            margin: 3.125rem 0;
+            font-size: 1.625rem;
+        }
+
+        .co-contact .contact-list .item span {
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    // 主体
+    .bd .container .co-contact .contact-list {
+        flex-flow: row wrap;
+
+        .item {
+            flex-flow: column wrap;
+            align-items: flex-start;
+        }
+    }
+}

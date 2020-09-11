@@ -178,8 +178,12 @@
         flex-flow: row wrap;
 
         .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0.75rem auto;
             width: 19%;
+            height: 6.25rem;
             text-align: center;
             background-color: #fff;
             border: 0.0625rem solid #E0E0E0;
@@ -187,10 +191,123 @@
             box-shadow: 0.2rem 0.2rem 0.3rem #cccccc60;
 
             img {
-                width: 100%;
+                max-width: 60%;
             }
         }
     }
 }
 
 /* ------------ 媒体查询 ------------ */
+@media (max-width: 992px) {
+
+    // 主体
+    .bd .content {
+        &.content-1 .container {
+            >.title {
+                margin: 3rem 0 5rem;
+            }
+
+            .enter-guide {
+                padding: 3.75rem 0;
+
+                .item {
+                    width: 9rem;
+
+                    img {
+                        width: 4.375rem;
+                        transform: translate(-50%, -6.0625rem);
+                    }
+                }
+            }
+        }
+
+        &.content-2 .platform-advantage {
+            padding: 0 0.625rem;
+
+            img {
+                width: 10rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    // 主体
+    .bd .content {
+        &.content-1 .container {
+            >.title {
+                margin: 2rem 0 4rem;
+            }
+
+            .enter-guide {
+                margin: 0 0.625rem;
+
+                .item {
+                    width: 7rem;
+
+                    .title {
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .btn {
+                    width: 10rem;
+                }
+            }
+        }
+
+        &.content-3 .meal-fee .card .card-hd {
+            padding: 1.875rem 0;
+
+            .price .num {
+                font-size: 2rem;
+            }
+        }
+
+        &.content-4 .merchant-logo-list .item {
+            width: 31%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    // 主体
+    .bd .content {
+        &.content-1 .container .enter-guide {
+            padding: 2.5rem 0;
+
+            .item {
+                width: 5rem;
+                font-size: 0.875rem;
+
+                img {
+                    width: 3.125rem;
+                    transform: translate(-50%, -4.0625rem)
+                }
+
+                .title {
+                    font-size: 1.125rem;
+                }
+            }
+
+            .btn {
+                width: 6.25rem;
+                font-size: 1.125rem;
+            }
+        }
+
+        &.content-2 .row {
+            margin: 0;
+        }
+
+        &.content-3 .meal-fee {
+            flex-flow: column nowrap;
+
+            .card {
+                margin: 0.625rem 0;
+            }
+        }
+    }
+}

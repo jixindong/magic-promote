@@ -81,7 +81,7 @@
                 }
 
                 .info {
-                    width: 26.25rem;
+                    max-width: 26.25rem;
                     font-size: 1.125rem;
                     text-align: center;
 
@@ -149,3 +149,165 @@
 }
 
 /* ------------ 媒体查询 ------------ */
+@media (max-width: 1200px) {
+
+    // 主体
+    .bd .content {
+        .container .row {
+            align-items: center;
+
+            .case-list .item {
+                margin-bottom: 0.625rem;
+            }
+        }
+
+        &.content-4 .swiper-star .swiper-container {
+            width: 48rem;
+
+            .swiper-slide {
+                padding: 0 1.5rem;
+
+                img {
+                    width: 15rem;
+                    height: 15rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    // 主体
+    .bd .content {
+        .container .row .case-list .item {
+            margin-bottom: 0.3125rem;
+
+            .info .title {
+                font-size: 1.125rem;
+            }
+        }
+
+        &.content-3 .course-serve {
+            height: 14rem;
+
+            img {
+                margin: 0 0.625rem;
+                width: 6.875rem;
+            }
+        }
+
+        &.content-4 .swiper-star {
+            .swiper-container {
+                width: 40rem;
+                height: 26rem;
+
+                .swiper-slide {
+                    padding: 0 1.25rem;
+
+                    img {
+                        margin-right: 1rem;
+                        width: 12.5rem;
+                        height: 12.5rem;
+                    }
+
+                    .info {
+                        .name {
+                            font-size: 2rem;
+                        }
+
+                        .fans {
+                            margin: 0.625rem 0;
+                        }
+
+                        .text {
+                            line-height: 1.875rem;
+                        }
+                    }
+                }
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 3rem;
+                height: 3rem;
+
+                &::after {
+                    font-size: 1.625rem;
+                }
+            }
+
+            .swiper-button-prev {
+                left: -1rem;
+            }
+
+            .swiper-button-next {
+                right: -1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    // 主体
+    .bd .content {
+        &.content-1 .swiper-case {
+            margin-top: 1.875rem;
+        }
+
+        &.content-4 .swiper-star {
+            .swiper-container {
+                width: 100%;
+
+                .swiper-slide {
+                    padding: 0 0.625rem;
+
+                    img {
+                        margin-right: 0.625rem;
+                        width: 26%;
+                        height: auto;
+                    }
+
+                    .info {
+                        .name {
+                            font-size: 1.5rem;
+                        }
+
+                        .fans {
+                            margin: 0.3125rem 0;
+                        }
+
+                        .text {
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    // 主体
+    .bd .content {
+        .container .row {
+            margin: 0;
+        }
+
+        &.content-4 .swiper-star .swiper-container .swiper-slide {
+            flex-flow: column nowrap;
+            padding: 2rem;
+
+            img {
+                width: 46%;
+            }
+        }
+    }
+}

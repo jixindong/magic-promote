@@ -117,6 +117,10 @@ let industryInfoFunc = (() => {
             },
             dataType: 'json',
             success: (res) => {
+                let infoTabs = document.querySelectorAll('#info-tabs .item');
+                infoTabs[0].classList.add('active');
+                infoTabs[1].classList.remove('active');
+
                 $('#info-list').empty();
                 for (let i = 0; i < res.page.list.length; i++) {
                     let item = `<div class="item"><img src="${res.page.list[i].path}"><div class="info"><div class="title">${res.page.list[i].title}</div><div class="text">${res.page.list[i].content}</div><div>${res.page.list[i].release_time}</div></div></div>`;

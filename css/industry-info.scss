@@ -9,6 +9,8 @@
     padding: 6.25rem 0 7.5rem;
 
     .info-lf {
+        width: 60%;
+
         .info-tabs {
             display: flex;
             border-bottom: 0.0625rem solid #D1D1D1;
@@ -32,7 +34,6 @@
 
         .info-list {
             margin-top: 1.875rem;
-            width: 50rem;
             min-height: 30rem;
 
             .item {
@@ -44,6 +45,7 @@
 
                 img {
                     width: 18.75rem;
+                    height: 9.375rem;
                 }
 
                 .info {
@@ -64,11 +66,12 @@
     }
 
     .info-rt {
+        width: 30%;
+
         .search-box {
             display: flex;
             align-items: center;
             padding: 0 1.25rem;
-            width: 19.375rem;
             overflow: hidden;
             border: 0.0625rem solid #D1D1D1;
             border-radius: 1.25rem;
@@ -106,3 +109,72 @@
 }
 
 /* ------------ 媒体查询 ------------ */
+@media (max-width: 1200px) {
+
+    // 主体
+    .bd .container .info-lf .info-list .item img {
+        width: 18.75rem;
+        height: 9.375rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    // 主体
+    .bd .container {
+        .info-lf .info-list .item img {
+            width: 11.25rem;
+            height: 5.625rem;
+        }
+
+        .info-rt .search-box img {
+            transform: translateX(-1rem);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    // 主体
+    .bd .container {
+        .info-lf .info-list .item {
+            img {
+                width: 9.375rem;
+                height: 4.6875rem;
+            }
+
+            .info {
+                padding: 0 0.625rem;
+
+                .title {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .info-rt .search-box img {
+            transform: translateX(-4.375rem);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    // 主体
+    .bd .container {
+        flex-flow: column nowrap;
+        padding: 1.25rem 0.625rem;
+
+        .info-lf {
+            width: 100%;
+        }
+
+        .info-rt {
+            width: 100%;
+
+            .search-box img {
+                transform: translateX(0);
+            }
+        }
+    }
+}

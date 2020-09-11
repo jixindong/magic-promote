@@ -40,7 +40,6 @@ let industryInfoDtlFunc = (() => {
                 $('#info-date').text(res.release_time);
                 $('#info-poster img').attr('src', res.path);
                 $('#info-content').text(res.content);
-                sessionStorage.removeItem('infoId');
             }
         });
     };
