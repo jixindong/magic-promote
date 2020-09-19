@@ -51,7 +51,8 @@ let homeFunc = (() => {
                         $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#merchantEnter">商家入驻</button></div>`);
                     } else if (i === 2) {
                         $('#banner-carousel .carousel-indicators').append(`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
-                        $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button><a href="${res.content.app}" class="btn link">下载APP</a></div>`);
+                        // $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button><a href="${res.content.app}" class="btn link">下载APP</a></div>`);
+                        $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button></div>`);
                     } else {
                         $('#banner-carousel .carousel-indicators').append(`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
                         $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e}" class="d-block w-100"></div>`);
@@ -63,14 +64,16 @@ let homeFunc = (() => {
                         $('#newsTabs').append(`<div class="item active">${e.name}</div>`);
                         let infoList = '';
                         e.info.forEach(v => {
-                            infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
+                            // infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
+                            infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg" onclick="homeFunc.navigateToInfoDtl(${v.id})"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
                         });
                         $('#newsList').append(`<div class="item active"><div class="row"><div class="col-12 col-md-6"><img src="${e.path}"></div><div class="col-12 col-md-6"><div class="info-list">${infoList}</div></div></div></div>`);
                     } else {
                         $('#newsTabs').append(`<div class="item">${e.name}</div>`);
                         let infoList = '';
                         e.info.forEach(v => {
-                            infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
+                            // infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
+                            infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg" onclick="homeFunc.navigateToInfoDtl(${v.id})"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
                         });
                         $('#newsList').append(`<div class="item"><div class="row"><div class="col-12 col-md-6"><img src="${e.path}"></div><div class="col-12 col-md-6"><div class="info-list">${infoList}</div></div></div></div>`);
                     }
@@ -92,9 +95,16 @@ let homeFunc = (() => {
         });
     };
 
+    // 跳转资讯详情页面
+    function navigateToInfoDtl(id) {
+        sessionStorage.setItem('infoId', id);
+        window.location.href = 'industry-info-detail.html';
+    };
+
     return {
         eventBind,
-        fetchWebBasicInfo
+        fetchWebBasicInfo,
+        navigateToInfoDtl
     };
 })();
 

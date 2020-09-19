@@ -38,27 +38,39 @@
 
             .item {
                 display: flex;
-                margin: 0.625rem 0;
+                margin: 1rem 0;
+                height: 9.5rem;
                 overflow: hidden;
                 border: 0.0625rem solid #D1D1D1;
                 border-radius: 0.625rem;
+                transition: transform .5s ease;
+
+                &:hover {
+                    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+                    transform: translateY(-0.3125rem);
+                }
 
                 img {
                     width: 18.75rem;
                     height: 9.375rem;
+                    cursor: pointer;
                 }
 
                 .info {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-around;
-                    padding: 0 1.875rem;
+                    padding: 0.3125rem 0.3125rem 0.3125rem 1.875rem;
                     color: #656565;
                     font-size: 0.875rem;
 
                     .title {
                         color: #333;
                         font-size: 1.25rem;
+                    }
+
+                    .text {
+                        overflow: auto;
                     }
                 }
             }
