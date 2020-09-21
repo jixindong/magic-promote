@@ -101,7 +101,7 @@ let industryInfoFunc = (() => {
             success: (res) => {
                 $('#info-list').empty();
                 for (let i = 0; i < res.page.list.length; i++) {
-                    let item = `<div class="item" onclick="industryInfoFunc.navigateToInfoDtl(${res.page.list[i].id})"><img src="${res.page.list[i].path}"><div class="info"><div class="title">${res.page.list[i].title}</div><div class="text">${res.page.list[i].content}</div><div>${res.page.list[i].release_time}</div></div></div>`;
+                    let item = `<div class="item" onclick="industryInfoFunc.navigateToInfoDtl(${res.page.list[i].id})"><img src="${res.page.list[i].path}"><div class="info"><div class="title">${res.page.list[i].title}</div><div class="text">${res.page.list[i].content_text}</div><div>${res.page.list[i].release_time}</div></div></div>`;
                     $('#info-list').append(item);
                 }
             }
@@ -124,7 +124,7 @@ let industryInfoFunc = (() => {
 
                 $('#info-list').empty();
                 for (let i = 0; i < res.page.list.length; i++) {
-                    let item = `<div class="item"><img src="${res.page.list[i].path}"><div class="info"><div class="title">${res.page.list[i].title}</div><div class="text">${res.page.list[i].content}</div><div>${res.page.list[i].release_time}</div></div></div>`;
+                    let item = `<div class="item"><img src="${res.page.list[i].path}"><div class="info"><div class="title">${res.page.list[i].title}</div><div class="text">${res.page.list[i].content_text}</div><div>${res.page.list[i].release_time}</div></div></div>`;
                     $('#info-list').append(item);
                 }
             }

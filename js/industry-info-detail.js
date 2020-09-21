@@ -39,7 +39,7 @@ let industryInfoDtlFunc = (() => {
                 $('#info-title').text(res.title);
                 $('#info-date').text(res.release_time);
                 // $('#info-poster img').attr('src', res.path);
-                $('#info-content').text(res.content);
+                $('#info-content').html(res.content);
             }
         });
     };

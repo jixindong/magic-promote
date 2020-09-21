@@ -27,6 +27,7 @@
                 color: #333;
                 text-align: center;
                 border: 0.0625rem solid #D5D5D5;
+                cursor: pointer;
 
                 &.active {
                     color: #fff;
@@ -50,7 +51,9 @@
 
         .detail-content .item {
             display: none;
+            margin: 0 auto;
             padding-top: 3.125rem;
+            width: 40rem;
 
             &.active {
                 display: block;
