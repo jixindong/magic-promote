@@ -8,6 +8,7 @@
         left: 50%;
         display: flex;
         flex-flow: column nowrap;
+        width: 100%;
         color: #fff;
         font-size: 2.625rem;
         text-align: center;
@@ -105,6 +106,60 @@
         // 分页
         .pageNav {
             margin: 1.25rem 0 0 auto;
+        }
+    }
+}
+
+/* ------------ 媒体查询 ------------ */
+@media (max-width: 1200px) {
+
+    // banner
+    .banner .text-box {
+        font-size: 2.375rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    // banner
+    .banner .text-box {
+        font-size: 2rem;
+    }
+
+    // 主体
+    .bd .container .star-list .item .star .baseMsg>img {
+        width: 13.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    // banner
+    .banner .text-box {
+        font-size: 1.5rem;
+    }
+
+    // 主体
+    .bd .container .star-list .item .star .baseMsg>img {
+        width: 15.625rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    // banner
+    .banner .text-box {
+        font-size: 1rem;
+    }
+
+    // 主体
+    .bd .container {
+        .star-list .item {
+            justify-content: center;
+        }
+
+        .pageNav {
+            margin: 1.25rem auto 0;
         }
     }
 }
