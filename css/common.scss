@@ -66,6 +66,35 @@ body {
 }
 
 /* ------------ defined style ------------ */
+// 文字流光
+@keyframes hue {
+    from {
+        filter: hue-rotate(0);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.text-hue {
+    color: #f35626;
+    background-color: coral;
+    background-image: -webkit-linear-gradient(45deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 12s infinite linear;
+}
+
+// 卡片
+.card {
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #ebeef5;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
 // 导航栏
 .hd {
     position: fixed;

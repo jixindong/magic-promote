@@ -1,0 +1,110 @@
+/* ------------ banner ------------ */
+.banner {
+    position: relative;
+
+    .text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        color: #fff;
+        font-size: 2.625rem;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* ------------ 主体 ------------ */
+.bd {
+    background-color: #f9f9f9;
+
+    .container {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        padding: 1.875rem 0;
+        min-height: 50rem;
+
+        // 网红列表
+        .star-list {
+            flex: 1;
+            width: 100%;
+
+            .item {
+                display: none;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                width: 100%;
+
+                &.active {
+                    display: flex;
+                }
+
+                .star {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    margin: 1rem 0;
+                    transition: transform .5s ease;
+
+                    &:hover {
+                        transform: translateY(-1rem);
+                    }
+
+                    .baseMsg {
+                        position: relative;
+
+                        >img {
+                            width: 17.1875rem;
+                        }
+
+                        .msg {
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            width: 80%;
+                            color: #999;
+                            font-size: 0.75rem;
+                            background-color: #fff;
+                            border-radius: 1rem 1rem 0 0;
+                            transform: translate(-50%, 1.25rem);
+
+                            .name {
+                                margin: 0.625rem 0 0.3125rem;
+                                color: #333;
+                                font-size: 1.125rem;
+
+                                img {
+                                    margin-left: 0.3125rem;
+                                    width: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .fans {
+                        display: flex;
+                        justify-content: space-around;
+                        padding: 3.125rem 0 1.25rem;
+
+                        .fans-detail {
+                            font-size: 0.875rem;
+                            text-align: center;
+
+                            .num {
+                                color: #0072ff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 分页
+        .pageNav {
+            margin: 1.25rem 0 0 auto;
+        }
+    }
+}
