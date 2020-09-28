@@ -44,16 +44,14 @@ let starWallFunc = (() => {
         $('#pagination').empty();
 
         // 上一页
-        if (listPage.currentPage !== 1) {
-            if (listPage.currentPage > 1) {
-                $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 1},limit: ${listPage.pageSize}})"><span>&lt;</span>`);
-            } else {
-                $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)"><span>&lt;</span>`);
-            }
+        if (listPage.totalPage > 1 && listPage.currentPage > 1) {
+            $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 1},limit: ${listPage.pageSize}})"><span>&lt;</span>`);
+        } else if (listPage.totalPage > 1 && listPage.currentPage <= 1) {
+            $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)"><span>&lt;</span>`);
         }
 
         // 中间页
-        if (listPage.totalPage <= 5) { // 总页数小于等于5
+        if (listPage.totalPage > 1 && listPage.totalPage <= 5) { // 总页数大于1且小于等于5
             // 普通页
             for (let i = 1; i <= listPage.totalPage; i++) {
                 $('#pagination').append(`<li class="page-item ${i === listPage.currentPage ? 'active' : ''}"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${i},limit: ${listPage.pageSize}})">${i}</a></li>`);
@@ -94,12 +92,10 @@ let starWallFunc = (() => {
         }
 
         // 下一页
-        if (listPage.currentPage !== 1) {
-            if (listPage.currentPage < listPage.totalPage) {
-                $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 1},limit: ${listPage.pageSize}})"><span>&gt;</span>`);
-            } else {
-                $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)"><span>&gt;</span>`);
-            }
+        if (listPage.totalPage > 1 && listPage.currentPage < listPage.totalPage) {
+            $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 1},limit: ${listPage.pageSize}})"><span>&gt;</span>`);
+        } else if (listPage.totalPage > 1 && listPage.currentPage >= listPage.totalPage) {
+            $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)"><span>&gt;</span>`);
         }
     };
 
