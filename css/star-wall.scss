@@ -29,74 +29,66 @@
         // 网红列表
         .star-list {
             flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: flex-start;
             width: 100%;
 
-            .item {
-                display: none;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                width: 100%;
+            .star {
+                display: inline-block;
+                margin: 1rem 0;
+                transition: transform .5s ease;
 
-                &.active {
-                    display: flex;
+                &:hover {
+                    transform: translateY(-1rem);
                 }
 
-                .star {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    margin: 1rem 0;
-                    transition: transform .5s ease;
+                .baseMsg {
+                    position: relative;
 
-                    &:hover {
-                        transform: translateY(-1rem);
+                    >img {
+                        width: 17.1875rem;
                     }
 
-                    .baseMsg {
-                        position: relative;
-
-                        >img {
-                            width: 17.1875rem;
-                        }
-
-                        .msg {
-                            position: absolute;
-                            left: 50%;
-                            bottom: 0;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            align-items: center;
-                            width: 80%;
-                            color: #999;
-                            font-size: 0.75rem;
-                            background-color: #fff;
-                            border-radius: 1rem 1rem 0 0;
-                            transform: translate(-50%, 1.25rem);
-
-                            .name {
-                                margin: 0.625rem 0 0.3125rem;
-                                color: #333;
-                                font-size: 1.125rem;
-
-                                img {
-                                    margin-left: 0.3125rem;
-                                    width: 1rem;
-                                }
-                            }
-                        }
-                    }
-
-                    .fans {
+                    .msg {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
                         display: flex;
-                        justify-content: space-around;
-                        padding: 3.125rem 0 1.25rem;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        width: 80%;
+                        color: #999;
+                        font-size: 0.75rem;
+                        background-color: #fff;
+                        border-radius: 1rem 1rem 0 0;
+                        transform: translate(-50%, 1.25rem);
 
-                        .fans-detail {
-                            font-size: 0.875rem;
-                            text-align: center;
+                        .name {
+                            margin: 0.625rem 0 0.3125rem;
+                            color: #333;
+                            font-size: 1.125rem;
 
-                            .num {
-                                color: #0072ff;
+                            img {
+                                margin-left: 0.3125rem;
+                                width: 1rem;
                             }
+                        }
+                    }
+                }
+
+                .fans {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 3.125rem 0 1.25rem;
+
+                    .fans-detail {
+                        font-size: 0.875rem;
+                        text-align: center;
+
+                        .num {
+                            color: #0072ff;
                         }
                     }
                 }

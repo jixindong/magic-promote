@@ -95,6 +95,35 @@ body {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
 }
 
+// 分页
+.pagination {
+
+    .previous,
+    .next {
+        position: relative;
+        color: #333;
+
+        &:hover {
+            &::before {
+                position: absolute;
+                color: #007bff;
+            }
+
+            span {
+                color: transparent;
+            }
+        }
+    }
+
+    .previous:hover::before {
+        content: '《';
+    }
+
+    .next:hover::before {
+        content: '》';
+    }
+}
+
 // 导航栏
 .hd {
     position: fixed;
