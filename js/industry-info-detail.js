@@ -27,7 +27,7 @@ let industryInfoDtlFunc = (() => {
 
     // 获取资讯详情
     function fetchInfoDetail() {
-        let infoId = sessionStorage.getItem('infoId');
+        let infoId = window.location.href.slice(window.location.href.indexOf('?') + 4);
         $.ajax({
             url: baseURL + 'notice/detail',
             type: 'POST',
@@ -36,6 +36,7 @@ let industryInfoDtlFunc = (() => {
             },
             dataType: 'json',
             success: (res) => {
+                document.title = res.title;
                 $('#info-title').text(res.title);
                 $('#info-date').text(res.release_time);
                 // $('#info-poster img').attr('src', res.path);

@@ -133,8 +133,7 @@ let industryInfoFunc = (() => {
 
     // 跳转资讯详情页面
     function navigateToInfoDtl(id) {
-        sessionStorage.setItem('infoId', id);
-        window.location.href = 'industry-info-detail.html';
+        window.location.href = `industry-info-detail.html?id=${id}`;
     };
 
     return {
