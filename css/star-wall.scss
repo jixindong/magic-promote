@@ -31,13 +31,12 @@
             flex: 1;
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-between;
             align-items: flex-start;
             width: 100%;
 
             .star {
                 display: inline-block;
-                margin: 1rem 0;
+                margin: 1rem 0.625rem;
                 transition: transform .5s ease;
 
                 &:hover {
