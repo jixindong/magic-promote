@@ -63,27 +63,27 @@ let starWallFunc = (() => {
                     $('#pagination').append(`<li class="page-item ${i === listPage.currentPage ? 'active' : ''}"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${i},limit: ${listPage.pageSize}})">${i}</a></li>`);
                 };
                 // 跳页
-                $('#pagination').append(`<li class="page-item"><a class="page-link next" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 5},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
+                $('#pagination').append(`<li class="page-item"><a class="page-link next" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 5 < listPage.totalPage ? listPage.currentPage + 5 : listPage.totalPage},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
                 // 末页
                 $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.totalPage},limit: ${listPage.pageSize}})">${listPage.totalPage}</a></li>`);
             } else if (listPage.currentPage > 5 && listPage.currentPage < listPage.totalPage - 4) { // 当前页非前5页且非后5页
                 // 首页
                 $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: 1,limit: ${listPage.pageSize}})">1</a></li>`);
                 // 跳页
-                $('#pagination').append(`<li class="page-item"><a class="page-link previous" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 5},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
+                $('#pagination').append(`<li class="page-item"><a class="page-link previous" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 5 > 1 ? listPage.currentPage - 5 : 1},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
                 // 普通页
                 for (let i = listPage.currentPage - 2; i < listPage.currentPage + 3; i++) {
                     $('#pagination').append(`<li class="page-item ${i === listPage.currentPage ? 'active' : ''}"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${i},limit: ${listPage.pageSize}})">${i}</a></li>`);
                 };
                 // 跳页
-                $('#pagination').append(`<li class="page-item"><a class="page-link next" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 5},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
+                $('#pagination').append(`<li class="page-item"><a class="page-link next" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage + 5 < listPage.totalPage ? listPage.currentPage + 5 : listPage.totalPage},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
                 // 末页
                 $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.totalPage},limit: ${listPage.pageSize}})">${listPage.totalPage}</a></li>`);
             } else { // 当前页是后5页
                 // 首页
                 $('#pagination').append(`<li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: 1,limit: ${listPage.pageSize}})">1</a></li>`);
                 // 跳页
-                $('#pagination').append(`<li class="page-item"><a class="page-link previous" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 5},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
+                $('#pagination').append(`<li class="page-item"><a class="page-link previous" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${listPage.currentPage - 5 > 1 ? listPage.currentPage - 5 : 1},limit: ${listPage.pageSize}})"><span>...</span></a></li>`);
                 // 普通页
                 for (let i = listPage.totalPage - 4; i <= listPage.totalPage; i++) {
                     $('#pagination').append(`<li class="page-item ${i === listPage.currentPage ? 'active' : ''}"><a class="page-link" href="javascript:void(0)" onclick="starWallFunc.fetchStarList({page: ${i},limit: ${listPage.pageSize}})">${i}</a></li>`);
