@@ -1,5 +1,5 @@
 // baseURL
-let baseURL = 'http://mtht.waszn.com:8001/';
+let baseURL = 'http://api.motui.com.cn:8001/';
 // let baseURL = 'http://192.168.1.22:8001/';
 
 // 公共方法
