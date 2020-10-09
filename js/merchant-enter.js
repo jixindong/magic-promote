@@ -40,12 +40,37 @@ let merchantEnterFunc = (() => {
         });
     };
 
+    // 获取套餐费用
+    function fetchSeatmealFee() {
+        $.ajax({
+            url: baseURL + 'setmeallinformation/listByGw',
+            type: 'POST',
+            data: {},
+            dataType: 'json',
+            success: res => {
+                if (res.code !== 200) {
+                    return false;
+                }
+
+                res.list.forEach((value, index) => {
+                    if (index === 1) {
+                        $('#mealFee').append(`<div class="card card-blue"><div class="card-hd"><div class="stars"><img src="images/icon-star.png"><img src="images/icon-star.png"><img src="images/icon-star.png"><img src="images/icon-star.png"></div><div class="price"><span>￥</span><span class="num">${value.price}</span><span>/年</span></div><div>${value.name}</div></div><div class="card-content"><span>${value.video}个达人推广</span><span>${value.shot}条视频</span><span>${value.live}场直播</span><span>${value.content}</span></div><a href="manage/index.html#/setmeal-open" class="purchase-btn">立即购买</a></div>`);
+                    } else {
+                        $('#mealFee').append(`<div class="card"><div class="card-hd"><div class="price"><span>￥</span><span class="num">${value.price}</span><span>/年</span></div><div>${value.name}</div></div><div class="card-content"><span>${value.video}个达人推广</span><span>${value.shot}条视频</span><span>${value.live}场直播</span><span>${value.content}</span></div><a href="manage/index.html#/setmeal-open" class="purchase-btn">立即购买</a></div>`);
+                    }
+                });
+            }
+        });
+    };
+
     return {
-        fetchWebBasicInfo
+        fetchWebBasicInfo,
+        fetchSeatmealFee
     }
 })();
 
 $(() => {
     commonFunc.handleMerchantEnter(); // 商家入驻
     merchantEnterFunc.fetchWebBasicInfo(); // 获取网站基本信息
+    merchantEnterFunc.fetchSeatmealFee(); // 获取套餐费用
 });
