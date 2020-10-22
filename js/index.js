@@ -35,7 +35,7 @@ let homeFunc = (() => {
 			dataType: 'json',
 			success: (res) => {
 				// title
-				document.title = res.content.bas_site_name;
+				// document.title = res.content.bas_site_name;
 				// logo
 				$('#logo').attr('src', res.content.logo);
 				// 下载APP
