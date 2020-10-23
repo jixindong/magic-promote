@@ -89,7 +89,6 @@ let agencyMerchantFunc = (() => {
 })();
 
 $(() => {
-    commonFunc.handleMerchantEnter(); // 商家入驻
     agencyMerchantFunc.eventBind(); // 事件绑定
     agencyMerchantFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

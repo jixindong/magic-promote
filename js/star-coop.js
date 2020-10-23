@@ -78,7 +78,6 @@ let starCoopFunc = (() => {
 })();
 
 $(() => {
-    commonFunc.handleMerchantEnter(); // 商家入驻
     starCoopFunc.handleSwiper(); // 初始化swiper
     starCoopFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });

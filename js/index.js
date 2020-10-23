@@ -124,8 +124,6 @@ let homeFunc = (() => {
 })();
 
 $(() => {
-	commonFunc.handleMerchantEnter(); // 商家入驻
-	commonFunc.handleStarApply(); // 网红申请
 	homeFunc.eventBind(); // 事件绑定
 	homeFunc.fetchWebBasicInfo(); // 获取网站基本信息
 });
