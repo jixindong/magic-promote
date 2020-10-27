@@ -1,4 +1,5 @@
 /* ------------ 主体 ------------ */
+
 .bd .content {
     &.content-1 .enter-guide {
         position: relative;
@@ -8,19 +9,16 @@
         padding: 6.25rem 0;
         border: 0.125rem dashed #999;
         border-radius: 2.5rem;
-
         .item {
             position: relative;
             width: 10rem;
             color: #666;
-
             img {
                 position: absolute;
                 left: 50%;
                 width: 5.625rem;
                 transform: translate(-50%, -9.0625rem);
             }
-
             .title {
                 margin-bottom: 1rem;
                 color: #333;
@@ -28,7 +26,6 @@
                 text-align: center;
             }
         }
-
         .btn {
             position: absolute;
             bottom: 0;
@@ -38,7 +35,6 @@
             transform: translate(-50%, 50%);
         }
     }
-
     &.content-2 .platform-advantage {
         position: relative;
         display: flex;
@@ -51,11 +47,9 @@
         background-color: #fff;
         border-radius: 1.25rem;
         box-shadow: 0.2rem 0.2rem 0.3rem #66666680;
-
         img {
             width: 12.5rem;
         }
-
         .num {
             position: absolute;
             top: 0;
@@ -71,16 +65,13 @@
             border-radius: 50%;
             transform: translate(-50%, -50%);
         }
-
         .info {
             width: 17.1875rem;
-
             .title {
                 margin-bottom: 1rem;
                 color: #333;
                 font-size: 1.5rem;
             }
-
             .text {
                 line-height: 1.5rem;
                 color: #999;
@@ -88,12 +79,10 @@
             }
         }
     }
-
     &.content-3 {
         .dyServive {
             margin: 0 auto 3.125rem;
             padding: 3rem 1rem 1rem;
-
             .title {
                 position: absolute;
                 top: 0;
@@ -106,7 +95,6 @@
                 background-repeat: no-repeat;
                 transform: translateX(-50%);
             }
-
             .msg {
                 padding: 0.625rem 1.875rem;
                 line-height: 2.5rem;
@@ -114,12 +102,10 @@
                 background-color: rgb(231, 239, 253);
             }
         }
-
         .meal-fee {
             display: flex;
             justify-content: center;
             align-items: center;
-
             .card {
                 margin: 0 0.3125rem;
                 width: 18.75rem;
@@ -128,56 +114,45 @@
                 box-shadow: 0 0.25rem 1rem 0 rgba(153, 153, 153, 0.35);
                 overflow: hidden;
                 transition: transform .5s;
-
                 &:hover {
                     transform: translateY(-1.25rem);
                 }
-
                 &.card-blue {
                     background-color: #fff;
                     box-shadow: 0 0.25rem 1rem 0 rgba(0, 123, 255, .35);
-
                     .card-hd {
                         color: #fff;
                         background-image: linear-gradient(45deg, #11BFFD 0%, #2F81EB 84%);
-
                         .price {
                             color: #fff;
                         }
                     }
-
                     .purchase-btn {
                         background-image: linear-gradient(45deg, #11BFFD 0%, #2F81EB 100%);
                     }
                 }
-
                 .card-hd {
                     padding: 3.75rem 0;
                     color: #5D7089;
                     text-align: center;
                     background-color: #fff;
                     border-radius: 0 0 3.75rem 3.75rem;
-
                     .stars {
                         display: flex;
                         justify-content: center;
                         padding: 1.25rem 0;
-
                         img {
                             width: 1.25rem;
                         }
                     }
-
                     .price {
                         color: #2797FF;
-
                         .num {
                             font-size: 3.125rem;
                             font-weight: 700;
                         }
                     }
                 }
-
                 .card-content {
                     display: flex;
                     flex-flow: column nowrap;
@@ -186,8 +161,8 @@
                     line-height: 1.875rem;
                     color: #596D87;
                     font-weight: 600;
+                    text-align: center;
                 }
-
                 .purchase-btn {
                     margin: 0 auto 1.875rem;
                     padding: 0.5rem 1.875rem;
@@ -199,11 +174,9 @@
             }
         }
     }
-
     &.content-4 .merchant-logo-list {
         display: flex;
         flex-flow: row wrap;
-
         .item {
             display: flex;
             justify-content: center;
@@ -216,7 +189,6 @@
             border: 0.0625rem solid #E0E0E0;
             border-radius: 0.625rem;
             box-shadow: 0.2rem 0.2rem 0.3rem #cccccc60;
-
             img {
                 max-width: 60%;
             }
@@ -224,22 +196,20 @@
     }
 }
 
-/* ------------ 媒体查询 ------------ */
-@media (max-width: 992px) {
 
+/* ------------ 媒体查询 ------------ */
+
+@media (max-width: 992px) {
     // 主体
     .bd .content {
         &.content-1 .container {
             >.title {
                 margin: 3rem 0 5rem;
             }
-
             .enter-guide {
                 padding: 3.75rem 0;
-
                 .item {
                     width: 9rem;
-
                     img {
                         width: 4.375rem;
                         transform: translate(-50%, -6.0625rem);
@@ -247,10 +217,8 @@
                 }
             }
         }
-
         &.content-2 .platform-advantage {
             padding: 0 0.625rem;
-
             img {
                 width: 10rem;
             }
@@ -259,39 +227,31 @@
 }
 
 @media (max-width: 768px) {
-
     // 主体
     .bd .content {
         &.content-1 .container {
             >.title {
                 margin: 2rem 0 4rem;
             }
-
             .enter-guide {
                 margin: 0 0.625rem;
-
                 .item {
                     width: 7rem;
-
                     .title {
                         font-size: 1.25rem;
                     }
                 }
-
                 .btn {
                     width: 10rem;
                 }
             }
         }
-
         &.content-3 .meal-fee .card .card-hd {
             padding: 1.875rem 0;
-
             .price .num {
                 font-size: 2rem;
             }
         }
-
         &.content-4 .merchant-logo-list .item {
             width: 31%;
         }
@@ -299,39 +259,31 @@
 }
 
 @media (max-width: 576px) {
-
     // 主体
     .bd .content {
         &.content-1 .container .enter-guide {
             padding: 2.5rem 0;
-
             .item {
                 width: 5rem;
                 font-size: 0.875rem;
-
                 img {
                     width: 3.125rem;
                     transform: translate(-50%, -4.0625rem)
                 }
-
                 .title {
                     font-size: 1.125rem;
                 }
             }
-
             .btn {
                 width: 6.25rem;
                 font-size: 1.125rem;
             }
         }
-
         &.content-2 .row {
             margin: 0;
         }
-
         &.content-3 .meal-fee {
             flex-flow: column nowrap;
-
             .card {
                 margin: 0.625rem 0;
             }
