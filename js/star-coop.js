@@ -34,7 +34,11 @@ let starCoopFunc = (() => {
             type: 'POST',
             data: {},
             dataType: 'json',
-            success: (res) => {
+            success: res => {
+                if (res.code !== 200) {
+                    commonFunc.navigatorToError(); // 跳转错误页
+                }
+
                 // logo
                 $('#logo').attr('src', res.content.logo);
                 // banner
