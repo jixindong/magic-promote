@@ -8,7 +8,7 @@ let industryInfoDtlFunc = (() => {
             dataType: 'json',
             success: res => {
                 if (res.code !== 200) {
-                    commonFunc.navigatorToError(); // 跳转错误页
+                    return false;
                 }
 
                 // logo
