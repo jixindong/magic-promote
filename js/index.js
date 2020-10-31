@@ -43,7 +43,7 @@ let homeFunc = (() => {
 		// logo
 		$('#logo').attr('src', res.content.logo);
 		// 下载APP
-		$('#app-download').attr('href', res.content.app);
+		$('#app-download').attr('href', res.content.app_path);
 		// banner
 		let imgs = res.content.sy;
 		if (imgs.length === 0) {
