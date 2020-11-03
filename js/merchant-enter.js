@@ -26,20 +26,7 @@ let merchantEnterFunc = (() => {
 					$('#banner-carousel .carousel-indicators').append(
 						'<li data-target="#banner-carousel" data-slide-to="0" class="active"></li>');
 					$('#banner-carousel .carousel-inner').append(
-						`<div class="carousel-item active"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"></div>`
-					);
-				} else if (i === 1) {
-					$('#banner-carousel .carousel-indicators').append(
-						`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
-					$('#banner-carousel .carousel-inner').append(
-						`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#merchantEnter">商家入驻</button></div>`
-					);
-				} else if (i === 2) {
-					$('#banner-carousel .carousel-indicators').append(
-						`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
-					// $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button><a href="${res.content.app}" class="btn link">下载APP</a></div>`);
-					$('#banner-carousel .carousel-inner').append(
-						`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button></div>`
+						`<div class="carousel-item active"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#merchantEnter">商家入驻</button></div>`
 					);
 				} else {
 					$('#banner-carousel .carousel-indicators').append(

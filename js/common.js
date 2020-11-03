@@ -1,6 +1,6 @@
 // baseURL
 let baseURL = 'http://api.motui.com.cn:8001/';
-// let baseURL = 'http://192.168.1.115:8001/';
+// let baseURL = 'http://192.168.1.177:8001/';
 
 // 公共方法
 let commonFunc = ((win) => {

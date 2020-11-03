@@ -68,9 +68,8 @@ let homeFunc = (() => {
 				} else if (i === 2) {
 					$('#banner-carousel .carousel-indicators').append(
 						`<li data-target="#banner-carousel" data-slide-to="${i}"></li>`);
-					// $('#banner-carousel .carousel-inner').append(`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button><a href="${res.content.app}" class="btn link">下载APP</a></div>`);
 					$('#banner-carousel .carousel-inner').append(
-						`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button></div>`
+						`<div class="carousel-item"><img src="${e.path}" class="d-block w-100" onclick="window.open(${e.link})"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starApply">立即开通</button><a href="${res.content.app_path}" target="_blank" class="btn link">下载APP</a></div>`
 					);
 				} else {
 					$('#banner-carousel .carousel-indicators').append(
@@ -87,7 +86,6 @@ let homeFunc = (() => {
 				$('#newsTabs').append(`<div class="item active">${e.name}</div>`);
 				let infoList = '';
 				e.info.forEach(v => {
-					// infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
 					infoList +=
 						`<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg" onclick="homeFunc.navigateToInfoDtl(${v.id})"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
 				});
@@ -98,7 +96,6 @@ let homeFunc = (() => {
 				$('#newsTabs').append(`<div class="item">${e.name}</div>`);
 				let infoList = '';
 				e.info.forEach(v => {
-					// infoList += `<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
 					infoList +=
 						`<div class="info-item"><div class="date"><span class="month-day">${v.release_time.substring(5,10)}</span><span>${v.release_time.substring(0,4)}</span></div><div class="msg" onclick="homeFunc.navigateToInfoDtl(${v.id})"><div class="title">${v.title}</div><div class="text">${v.content}</div></div></div>`;
 				});
