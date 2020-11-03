@@ -73,11 +73,11 @@ let aboutUsFunc = (() => {
 
 	// 初始化百度地图
 	function handleBaiduMap(longitude, latitude) {
-		let longitude = longitude || 118.064662;
-		let latitude = latitude || 36.848908;
+		let long = longitude || 118.064662;
+		let lat = latitude || 36.848908;
 		// 百度地图API功能
 		let map = new BMap.Map('co-map');
-		map.centerAndZoom(new BMap.Point(longitude, latitude), 19);
+		map.centerAndZoom(new BMap.Point(long, lat), 19);
 		// 添加带有定位的导航控件
 		let navigationControl = new BMap.NavigationControl({
 			// 靠左上角位置
