@@ -49,9 +49,13 @@ let commonFunc = ((win) => {
 
 	// 设置百度商桥
 	function handleBaiduBridge(bridge) {
+		if(!bridge){
+			return false;
+		}
+		
 		let baiduBridge = document.createElement("script");
 		let s = document.getElementsByTagName("script")[0];
-		baiduBridge.src = bridge || 'https://hm.baidu.com/hm.js?d0f59d0259dd9c3316d8700d0e5c8816';
+		baiduBridge.src = bridge;
 		s.parentNode.insertBefore(baiduBridge, s);
 	};
 
